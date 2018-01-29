@@ -1,0 +1,5076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="../../esp/esp-idf/components" name="2">
+      <df name="app_trace">
+        <df name="gcov">
+          <in>gcov_rtio.c</in>
+        </df>
+        <df name="include">
+          <in>esp_app_trace.h</in>
+          <in>esp_app_trace_util.h</in>
+        </df>
+        <df name="sys_view">
+          <df name="Config">
+            <in>Global.h</in>
+            <in>SEGGER_RTT_Conf.h</in>
+            <in>SEGGER_SYSVIEW_Conf.h</in>
+          </df>
+          <df name="esp32">
+            <in>SEGGER_RTT_esp32.c</in>
+          </df>
+          <df name="Sample">
+            <df name="Config">
+              <in>SEGGER_SYSVIEW_Config_FreeRTOS.c</in>
+            </df>
+            <df name="OS">
+              <in>SEGGER_SYSVIEW_FreeRTOS.c</in>
+              <in>SEGGER_SYSVIEW_FreeRTOS.h</in>
+            </df>
+          </df>
+          <df name="SEGGER">
+            <in>SEGGER.h</in>
+            <in>SEGGER_RTT.h</in>
+            <in>SEGGER_SYSVIEW.c</in>
+            <in>SEGGER_SYSVIEW.h</in>
+            <in>SEGGER_SYSVIEW_ConfDefaults.h</in>
+            <in>SEGGER_SYSVIEW_Int.h</in>
+          </df>
+        </df>
+        <df name="test">
+          <in>test_trace.c</in>
+        </df>
+        <in>app_trace.c</in>
+        <in>app_trace_util.c</in>
+        <in>host_file_io.c</in>
+      </df>
+      <df name="app_update">
+        <df name="include">
+          <in>esp_ota_ops.h</in>
+        </df>
+        <df name="test">
+          <in>test_ota_ops.c</in>
+        </df>
+        <in>esp_ota_ops.c</in>
+      </df>
+      <df name="aws_iot">
+        <df name="aws-iot-device-sdk-embedded-C">
+          <df name="certs">
+          </df>
+          <df name="external_libs">
+            <df name="CppUTest">
+            </df>
+            <df name="jsmn">
+              <in>jsmn.c</in>
+              <in>jsmn.h</in>
+            </df>
+            <df name="mbedTLS">
+            </df>
+          </df>
+          <df name="include">
+            <in>aws_iot_error.h</in>
+            <in>aws_iot_json_utils.h</in>
+            <in>aws_iot_log.h</in>
+            <in>aws_iot_mqtt_client.h</in>
+            <in>aws_iot_mqtt_client_common_internal.h</in>
+            <in>aws_iot_mqtt_client_interface.h</in>
+            <in>aws_iot_shadow_actions.h</in>
+            <in>aws_iot_shadow_interface.h</in>
+            <in>aws_iot_shadow_json.h</in>
+            <in>aws_iot_shadow_json_data.h</in>
+            <in>aws_iot_shadow_key.h</in>
+            <in>aws_iot_shadow_records.h</in>
+            <in>aws_iot_version.h</in>
+            <in>network_interface.h</in>
+            <in>threads_interface.h</in>
+            <in>timer_interface.h</in>
+          </df>
+          <df name="platform">
+            <df name="linux">
+              <df name="common">
+                <in>timer.c</in>
+                <in>timer_platform.h</in>
+              </df>
+              <df name="mbedtls">
+                <in>network_mbedtls_wrapper.c</in>
+                <in>network_platform.h</in>
+              </df>
+              <df name="pthread">
+                <in>threads_platform.h</in>
+                <in>threads_pthread_wrapper.c</in>
+              </df>
+            </df>
+          </df>
+          <df name="samples">
+            <df name="linux">
+              <df name="shadow_sample">
+                <in>aws_iot_config.h</in>
+                <in>shadow_sample.c</in>
+              </df>
+              <df name="shadow_sample_console_echo">
+                <in>aws_iot_config.h</in>
+                <in>shadow_console_echo.c</in>
+              </df>
+              <df name="subscribe_publish_cpp_sample">
+                <in>aws_iot_config.h</in>
+                <in>subscribe_publish_cpp_sample.cpp</in>
+              </df>
+              <df name="subscribe_publish_library_sample">
+                <in>aws_iot_config.h</in>
+                <in>subscribe_publish_library_sample.c</in>
+              </df>
+              <df name="subscribe_publish_sample">
+                <in>aws_iot_config.h</in>
+                <in>subscribe_publish_sample.c</in>
+              </df>
+            </df>
+          </df>
+          <df name="src">
+            <in>aws_iot_json_utils.c</in>
+            <in>aws_iot_mqtt_client.c</in>
+            <in>aws_iot_mqtt_client_common_internal.c</in>
+            <in>aws_iot_mqtt_client_connect.c</in>
+            <in>aws_iot_mqtt_client_publish.c</in>
+            <in>aws_iot_mqtt_client_subscribe.c</in>
+            <in>aws_iot_mqtt_client_unsubscribe.c</in>
+            <in>aws_iot_mqtt_client_yield.c</in>
+            <in>aws_iot_shadow.c</in>
+            <in>aws_iot_shadow_actions.c</in>
+            <in>aws_iot_shadow_json.c</in>
+            <in>aws_iot_shadow_records.c</in>
+          </df>
+          <df name="tests">
+            <df name="integration">
+              <df name="include">
+                <in>aws_iot_config.h</in>
+                <in>aws_iot_integ_tests_config.h</in>
+                <in>aws_iot_test_integration_common.h</in>
+              </df>
+              <df name="multithreadingTest">
+                <in>aws_iot_test_multithreading_validation.c</in>
+              </df>
+              <df name="src">
+                <in>aws_iot_test_auto_reconnect.c</in>
+                <in>aws_iot_test_basic_connectivity.c</in>
+                <in>aws_iot_test_integration_runner.c</in>
+                <in>aws_iot_test_multiple_clients.c</in>
+              </df>
+            </df>
+            <df name="unit">
+              <df name="include">
+                <in>aws_iot_config.h</in>
+                <in>aws_iot_tests_unit_helper_functions.h</in>
+                <in>aws_iot_tests_unit_shadow_helper.h</in>
+              </df>
+              <df name="src">
+                <in>aws_iot_tests_unit_common_tests.cpp</in>
+                <in>aws_iot_tests_unit_common_tests_helper.c</in>
+                <in>aws_iot_tests_unit_connect.cpp</in>
+                <in>aws_iot_tests_unit_connect_helper.c</in>
+                <in>aws_iot_tests_unit_disconnect.cpp</in>
+                <in>aws_iot_tests_unit_disconnect_helper.c</in>
+                <in>aws_iot_tests_unit_helper_functions.c</in>
+                <in>aws_iot_tests_unit_json_utils.cpp</in>
+                <in>aws_iot_tests_unit_json_utils_helper.c</in>
+                <in>aws_iot_tests_unit_publish.cpp</in>
+                <in>aws_iot_tests_unit_publish_helper.c</in>
+                <in>aws_iot_tests_unit_runner.cpp</in>
+                <in>aws_iot_tests_unit_shadow_action.cpp</in>
+                <in>aws_iot_tests_unit_shadow_action_helper.c</in>
+                <in>aws_iot_tests_unit_shadow_delta.cpp</in>
+                <in>aws_iot_tests_unit_shadow_delta_helper.c</in>
+                <in>aws_iot_tests_unit_shadow_json_builder.cpp</in>
+                <in>aws_iot_tests_unit_shadow_json_builder_helper.c</in>
+                <in>aws_iot_tests_unit_shadow_null_fields.cpp</in>
+                <in>aws_iot_tests_unit_shadow_null_fields_helper.c</in>
+                <in>aws_iot_tests_unit_subscribe.cpp</in>
+                <in>aws_iot_tests_unit_subscribe_helper.c</in>
+                <in>aws_iot_tests_unit_unsubscribe.cpp</in>
+                <in>aws_iot_tests_unit_unsubscribe_helper.c</in>
+                <in>aws_iot_tests_unit_yield.cpp</in>
+                <in>aws_iot_tests_unit_yield_helper.c</in>
+              </df>
+              <df name="tls_mock">
+                <in>aws_iot_tests_unit_mock_tls.c</in>
+                <in>aws_iot_tests_unit_mock_tls_params.c</in>
+                <in>aws_iot_tests_unit_mock_tls_params.h</in>
+                <in>network_platform.h</in>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="include">
+          <in>aws_iot_config.h</in>
+          <in>aws_iot_log.h</in>
+          <in>network_platform.h</in>
+          <in>threads_platform.h</in>
+          <in>timer_platform.h</in>
+        </df>
+        <df name="port">
+          <in>network_mbedtls_wrapper.c</in>
+          <in>threads_freertos.c</in>
+          <in>timer.c</in>
+        </df>
+      </df>
+      <df name="bootloader">
+        <df name="subproject">
+          <df name="main">
+            <in>bootloader_config.h</in>
+            <in>bootloader_start.c</in>
+            <in>flash_qio_mode.c</in>
+            <in>flash_qio_mode.h</in>
+          </df>
+        </df>
+      </df>
+      <df name="bootloader_support">
+        <df name="include">
+          <in>bootloader_clock.h</in>
+          <in>esp_efuse.h</in>
+          <in>esp_flash_encrypt.h</in>
+          <in>esp_flash_partitions.h</in>
+          <in>esp_image_format.h</in>
+          <in>esp_secure_boot.h</in>
+        </df>
+        <df name="include_priv">
+          <in>bootloader_flash.h</in>
+          <in>bootloader_random.h</in>
+          <in>bootloader_sha.h</in>
+        </df>
+        <df name="src">
+          <in>bootloader_clock.c</in>
+          <in>bootloader_flash.c</in>
+          <in>bootloader_random.c</in>
+          <in>bootloader_sha.c</in>
+          <in>efuse.c</in>
+          <in>esp_image_format.c</in>
+          <in>flash_encrypt.c</in>
+          <in>flash_partitions.c</in>
+          <in>secure_boot.c</in>
+          <in>secure_boot_signatures.c</in>
+        </df>
+        <df name="test">
+          <in>test_verify_image.c</in>
+        </df>
+      </df>
+      <df name="bt">
+        <df name="bluedroid">
+          <df name="api">
+            <df name="include">
+              <in>esp_a2dp_api.h</in>
+              <in>esp_avrc_api.h</in>
+              <in>esp_blufi_api.h</in>
+              <in>esp_bt_defs.h</in>
+              <in>esp_bt_device.h</in>
+              <in>esp_bt_main.h</in>
+              <in>esp_gap_ble_api.h</in>
+              <in>esp_gap_bt_api.h</in>
+              <in>esp_gatt_common_api.h</in>
+              <in>esp_gatt_defs.h</in>
+              <in>esp_gattc_api.h</in>
+              <in>esp_gatts_api.h</in>
+              <in>esp_spp_api.h</in>
+            </df>
+            <in>esp_a2dp_api.c</in>
+            <in>esp_avrc_api.c</in>
+            <in>esp_blufi_api.c</in>
+            <in>esp_bt_device.c</in>
+            <in>esp_bt_main.c</in>
+            <in>esp_gap_ble_api.c</in>
+            <in>esp_gap_bt_api.c</in>
+            <in>esp_gatt_common_api.c</in>
+            <in>esp_gattc_api.c</in>
+            <in>esp_gatts_api.c</in>
+            <in>esp_spp_api.c</in>
+          </df>
+          <df name="bta">
+            <df name="ar">
+              <in>bta_ar.c</in>
+              <in>bta_ar_int.h</in>
+            </df>
+            <df name="av">
+              <in>bta_av_aact.c</in>
+              <in>bta_av_act.c</in>
+              <in>bta_av_api.c</in>
+              <in>bta_av_cfg.c</in>
+              <in>bta_av_ci.c</in>
+              <in>bta_av_int.h</in>
+              <in>bta_av_main.c</in>
+              <in>bta_av_sbc.c</in>
+              <in>bta_av_ssm.c</in>
+            </df>
+            <df name="dm">
+              <in>bta_dm_act.c</in>
+              <in>bta_dm_api.c</in>
+              <in>bta_dm_cfg.c</in>
+              <in>bta_dm_ci.c</in>
+              <in>bta_dm_int.h</in>
+              <in>bta_dm_main.c</in>
+              <in>bta_dm_pm.c</in>
+              <in>bta_dm_sco.c</in>
+            </df>
+            <df name="gatt">
+              <in>bta_gatt_common.c</in>
+              <in>bta_gattc_act.c</in>
+              <in>bta_gattc_api.c</in>
+              <in>bta_gattc_cache.c</in>
+              <in>bta_gattc_ci.c</in>
+              <in>bta_gattc_main.c</in>
+              <in>bta_gattc_utils.c</in>
+              <in>bta_gatts_act.c</in>
+              <in>bta_gatts_api.c</in>
+              <in>bta_gatts_main.c</in>
+              <in>bta_gatts_utils.c</in>
+            </df>
+            <df name="hh">
+              <in>bta_hh_act.c</in>
+              <in>bta_hh_api.c</in>
+              <in>bta_hh_cfg.c</in>
+              <in>bta_hh_int.h</in>
+              <in>bta_hh_le.c</in>
+              <in>bta_hh_main.c</in>
+              <in>bta_hh_utils.c</in>
+            </df>
+            <df name="include">
+              <in>bta_api.h</in>
+              <in>bta_ar_api.h</in>
+              <in>bta_av_api.h</in>
+              <in>bta_av_ci.h</in>
+              <in>bta_av_co.h</in>
+              <in>bta_av_sbc.h</in>
+              <in>bta_dm_ci.h</in>
+              <in>bta_dm_co.h</in>
+              <in>bta_gatt_api.h</in>
+              <in>bta_gatt_common.h</in>
+              <in>bta_gattc_ci.h</in>
+              <in>bta_gattc_co.h</in>
+              <in>bta_gattc_int.h</in>
+              <in>bta_gatts_co.h</in>
+              <in>bta_gatts_int.h</in>
+              <in>bta_hh_api.h</in>
+              <in>bta_hh_co.h</in>
+              <in>bta_jv_api.h</in>
+              <in>bta_jv_co.h</in>
+              <in>bta_sdp_api.h</in>
+              <in>bta_sys.h</in>
+              <in>utl.h</in>
+            </df>
+            <df name="jv">
+              <in>bta_jv_act.c</in>
+              <in>bta_jv_api.c</in>
+              <in>bta_jv_cfg.c</in>
+              <in>bta_jv_int.h</in>
+              <in>bta_jv_main.c</in>
+            </df>
+            <df name="sdp">
+              <in>bta_sdp.c</in>
+              <in>bta_sdp_act.c</in>
+              <in>bta_sdp_api.c</in>
+              <in>bta_sdp_cfg.c</in>
+              <in>bta_sdp_int.h</in>
+            </df>
+            <df name="sys">
+              <df name="include">
+                <in>bta_sys_int.h</in>
+              </df>
+              <in>bta_sys_conn.c</in>
+              <in>bta_sys_main.c</in>
+              <in>utl.c</in>
+            </df>
+          </df>
+          <df name="btc">
+            <df name="core">
+              <in>btc_alarm.c</in>
+              <in>btc_ble_storage.c</in>
+              <in>btc_config.c</in>
+              <in>btc_dev.c</in>
+              <in>btc_dm.c</in>
+              <in>btc_main.c</in>
+              <in>btc_manage.c</in>
+              <in>btc_profile_queue.c</in>
+              <in>btc_sec.c</in>
+              <in>btc_sm.c</in>
+              <in>btc_storage.c</in>
+              <in>btc_task.c</in>
+              <in>btc_util.c</in>
+            </df>
+            <df name="include">
+              <in>btc_alarm.h</in>
+              <in>btc_ble_storage.h</in>
+              <in>btc_common.h</in>
+              <in>btc_config.h</in>
+              <in>btc_dev.h</in>
+              <in>btc_dm.h</in>
+              <in>btc_main.h</in>
+              <in>btc_manage.h</in>
+              <in>btc_profile_queue.h</in>
+              <in>btc_sm.h</in>
+              <in>btc_storage.h</in>
+              <in>btc_task.h</in>
+              <in>btc_util.h</in>
+            </df>
+            <df name="profile">
+              <df name="esp">
+                <df name="ble_button">
+                  <in>button_pro.c</in>
+                </df>
+                <df name="blufi">
+                  <df name="include">
+                    <in>blufi_int.h</in>
+                  </df>
+                  <in>blufi_prf.c</in>
+                  <in>blufi_protocol.c</in>
+                </df>
+                <df name="include">
+                  <in>btc_blufi_prf.h</in>
+                  <in>button_pro.h</in>
+                  <in>wx_airsync_prf.h</in>
+                </df>
+                <df name="wechat_AirSync">
+                  <in>wx_airsync_prf.c</in>
+                </df>
+              </df>
+              <df name="std">
+                <df name="a2dp">
+                  <df name="include">
+                    <in>btc_av_co.h</in>
+                  </df>
+                  <in>bta_av_co.c</in>
+                  <in>btc_a2dp.c</in>
+                  <in>btc_a2dp_control.c</in>
+                  <in>btc_a2dp_sink.c</in>
+                  <in>btc_a2dp_source.c</in>
+                  <in>btc_av.c</in>
+                </df>
+                <df name="avrc">
+                  <in>btc_avrc.c</in>
+                </df>
+                <df name="battery">
+                  <df name="include">
+                    <in>srvc_battery_int.h</in>
+                  </df>
+                  <in>battery_prf.c</in>
+                </df>
+                <df name="dis">
+                  <df name="include">
+                    <in>srvc_dis_int.h</in>
+                  </df>
+                  <in>dis_profile.c</in>
+                </df>
+                <df name="gap">
+                  <in>btc_gap_ble.c</in>
+                  <in>btc_gap_bt.c</in>
+                </df>
+                <df name="gatt">
+                  <in>btc_gatt_util.c</in>
+                  <in>btc_gattc.c</in>
+                  <in>btc_gatts.c</in>
+                </df>
+                <df name="hid">
+                  <df name="include">
+                    <in>hid_conn.h</in>
+                    <in>hidh_int.h</in>
+                  </df>
+                </df>
+                <df name="hid_le">
+                  <in>hid_le_prf.c</in>
+                </df>
+                <df name="include">
+                  <in>bt_sdp.h</in>
+                  <in>btc_a2dp.h</in>
+                  <in>btc_a2dp_control.h</in>
+                  <in>btc_a2dp_sink.h</in>
+                  <in>btc_a2dp_source.h</in>
+                  <in>btc_av.h</in>
+                  <in>btc_av_api.h</in>
+                  <in>btc_avrc.h</in>
+                  <in>btc_gap_ble.h</in>
+                  <in>btc_gap_bt.h</in>
+                  <in>btc_gatt_util.h</in>
+                  <in>btc_gattc.h</in>
+                  <in>btc_gatts.h</in>
+                  <in>btc_spp.h</in>
+                  <in>dis_api.h</in>
+                  <in>hid_le_prf.h</in>
+                  <in>srvc_api.h</in>
+                </df>
+                <df name="smp">
+                  <df name="include">
+                    <in>esp_sec_api.h</in>
+                  </df>
+                  <in>esp_app_sec.c</in>
+                </df>
+                <df name="spp">
+                  <in>btc_spp.c</in>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="btcore">
+            <df name="include">
+              <in>bdaddr.h</in>
+              <in>device_features.h</in>
+              <in>event_mask.h</in>
+              <in>version.h</in>
+            </df>
+            <in>bdaddr.c</in>
+          </df>
+          <df name="btif">
+            <in>bta_dm_co.c</in>
+            <in>bta_gattc_co.c</in>
+            <in>bta_gatts_co.c</in>
+          </df>
+          <df name="device">
+            <df name="include">
+              <in>controller.h</in>
+              <in>interop.h</in>
+              <in>interop_database.h</in>
+            </df>
+            <in>controller.c</in>
+            <in>interop.c</in>
+          </df>
+          <df name="external">
+            <df name="sbc">
+              <df name="decoder">
+                <df name="include">
+                  <in>oi_assert.h</in>
+                  <in>oi_bitstream.h</in>
+                  <in>oi_bt_spec.h</in>
+                  <in>oi_codec_sbc.h</in>
+                  <in>oi_codec_sbc_private.h</in>
+                  <in>oi_common.h</in>
+                  <in>oi_cpu_dep.h</in>
+                  <in>oi_modules.h</in>
+                  <in>oi_osinterface.h</in>
+                  <in>oi_status.h</in>
+                  <in>oi_stddefs.h</in>
+                  <in>oi_string.h</in>
+                  <in>oi_time.h</in>
+                  <in>oi_utils.h</in>
+                </df>
+                <df name="srce">
+                  <in>alloc.c</in>
+                  <in>bitalloc-sbc.c</in>
+                  <in>bitalloc.c</in>
+                  <in>bitstream-decode.c</in>
+                  <in>decoder-oina.c</in>
+                  <in>decoder-private.c</in>
+                  <in>decoder-sbc.c</in>
+                  <in>dequant.c</in>
+                  <in>framing-sbc.c</in>
+                  <in>framing.c</in>
+                  <in>oi_codec_version.c</in>
+                  <in>synthesis-8-generated.c</in>
+                  <in>synthesis-dct8.c</in>
+                  <in>synthesis-sbc.c</in>
+                </df>
+              </df>
+              <df name="encoder">
+                <df name="include">
+                  <in>sbc_dct.h</in>
+                  <in>sbc_enc_func_declare.h</in>
+                  <in>sbc_encoder.h</in>
+                  <in>sbc_if.h</in>
+                  <in>sbc_types.h</in>
+                </df>
+                <df name="srce">
+                  <in>sbc_analysis.c</in>
+                  <in>sbc_dct.c</in>
+                  <in>sbc_dct_coeffs.c</in>
+                  <in>sbc_enc_bit_alloc_mono.c</in>
+                  <in>sbc_enc_bit_alloc_ste.c</in>
+                  <in>sbc_enc_coeffs.c</in>
+                  <in>sbc_encoder.c</in>
+                  <in>sbc_packing.c</in>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="hci">
+            <df name="include">
+              <in>bt_vendor_lib.h</in>
+              <in>buffer_allocator.h</in>
+              <in>hci_hal.h</in>
+              <in>hci_internals.h</in>
+              <in>hci_layer.h</in>
+              <in>hci_packet_factory.h</in>
+              <in>hci_packet_parser.h</in>
+              <in>packet_fragmenter.h</in>
+            </df>
+            <in>buffer_allocator.c</in>
+            <in>hci_hal_h4.c</in>
+            <in>hci_layer.c</in>
+            <in>hci_packet_factory.c</in>
+            <in>hci_packet_parser.c</in>
+            <in>packet_fragmenter.c</in>
+          </df>
+          <df name="include">
+            <in>bt_common_types.h</in>
+            <in>bt_defs.h</in>
+            <in>bt_target.h</in>
+            <in>bt_trace.h</in>
+            <in>bt_vendor_lib.h</in>
+            <in>bte.h</in>
+            <in>bte_appl.h</in>
+          </df>
+          <df name="main">
+            <in>bte_init.c</in>
+            <in>bte_main.c</in>
+          </df>
+          <df name="osi">
+            <df name="include">
+              <in>alarm.h</in>
+              <in>allocator.h</in>
+              <in>buffer.h</in>
+              <in>config.h</in>
+              <in>fixed_queue.h</in>
+              <in>future.h</in>
+              <in>hash_functions.h</in>
+              <in>hash_map.h</in>
+              <in>list.h</in>
+              <in>mutex.h</in>
+              <in>osi.h</in>
+              <in>semaphore.h</in>
+              <in>thread.h</in>
+            </df>
+            <in>alarm.c</in>
+            <in>allocator.c</in>
+            <in>buffer.c</in>
+            <in>config.c</in>
+            <in>fixed_queue.c</in>
+            <in>future.c</in>
+            <in>hash_functions.c</in>
+            <in>hash_map.c</in>
+            <in>list.c</in>
+            <in>mutex.c</in>
+            <in>osi.c</in>
+            <in>semaphore.c</in>
+          </df>
+          <df name="stack">
+            <df name="a2dp">
+              <df name="include">
+                <in>a2d_int.h</in>
+              </df>
+              <in>a2d_api.c</in>
+              <in>a2d_sbc.c</in>
+            </df>
+            <df name="avct">
+              <df name="include">
+                <in>avct_defs.h</in>
+                <in>avct_int.h</in>
+              </df>
+              <in>avct_api.c</in>
+              <in>avct_ccb.c</in>
+              <in>avct_l2c.c</in>
+              <in>avct_lcb.c</in>
+              <in>avct_lcb_act.c</in>
+            </df>
+            <df name="avdt">
+              <df name="include">
+                <in>avdt_defs.h</in>
+                <in>avdt_int.h</in>
+              </df>
+              <in>avdt_ad.c</in>
+              <in>avdt_api.c</in>
+              <in>avdt_ccb.c</in>
+              <in>avdt_ccb_act.c</in>
+              <in>avdt_l2c.c</in>
+              <in>avdt_msg.c</in>
+              <in>avdt_scb.c</in>
+              <in>avdt_scb_act.c</in>
+            </df>
+            <df name="avrc">
+              <df name="include">
+                <in>avrc_int.h</in>
+              </df>
+              <in>avrc_api.c</in>
+              <in>avrc_bld_ct.c</in>
+              <in>avrc_bld_tg.c</in>
+              <in>avrc_opt.c</in>
+              <in>avrc_pars_ct.c</in>
+              <in>avrc_pars_tg.c</in>
+              <in>avrc_sdp.c</in>
+              <in>avrc_utils.c</in>
+            </df>
+            <df name="btm">
+              <in>btm_acl.c</in>
+              <in>btm_ble.c</in>
+              <in>btm_ble_addr.c</in>
+              <in>btm_ble_adv_filter.c</in>
+              <in>btm_ble_batchscan.c</in>
+              <in>btm_ble_bgconn.c</in>
+              <in>btm_ble_cont_energy.c</in>
+              <in>btm_ble_gap.c</in>
+              <in>btm_ble_multi_adv.c</in>
+              <in>btm_ble_privacy.c</in>
+              <in>btm_dev.c</in>
+              <in>btm_devctl.c</in>
+              <in>btm_inq.c</in>
+              <in>btm_main.c</in>
+              <in>btm_pm.c</in>
+              <in>btm_sco.c</in>
+              <in>btm_sec.c</in>
+            </df>
+            <df name="btu">
+              <in>btu_hcif.c</in>
+              <in>btu_init.c</in>
+              <in>btu_task.c</in>
+            </df>
+            <df name="gap">
+              <df name="include">
+                <in>gap_int.h</in>
+              </df>
+              <in>gap_api.c</in>
+              <in>gap_ble.c</in>
+              <in>gap_conn.c</in>
+              <in>gap_utils.c</in>
+            </df>
+            <df name="gatt">
+              <df name="include">
+                <in>gatt_int.h</in>
+              </df>
+              <in>att_protocol.c</in>
+              <in>gatt_api.c</in>
+              <in>gatt_attr.c</in>
+              <in>gatt_auth.c</in>
+              <in>gatt_cl.c</in>
+              <in>gatt_db.c</in>
+              <in>gatt_main.c</in>
+              <in>gatt_sr.c</in>
+              <in>gatt_utils.c</in>
+            </df>
+            <df name="hcic">
+              <in>hciblecmds.c</in>
+              <in>hcicmds.c</in>
+            </df>
+            <df name="include">
+              <in>a2d_api.h</in>
+              <in>a2d_sbc.h</in>
+              <in>avct_api.h</in>
+              <in>avdt_api.h</in>
+              <in>avdtc_api.h</in>
+              <in>avrc_api.h</in>
+              <in>avrc_defs.h</in>
+              <in>bt_types.h</in>
+              <in>btm_api.h</in>
+              <in>btm_ble_api.h</in>
+              <in>btm_ble_int.h</in>
+              <in>btm_int.h</in>
+              <in>btu.h</in>
+              <in>dyn_mem.h</in>
+              <in>gap_api.h</in>
+              <in>gatt_api.h</in>
+              <in>gattdefs.h</in>
+              <in>hcidefs.h</in>
+              <in>hcimsgs.h</in>
+              <in>hiddefs.h</in>
+              <in>hidh_api.h</in>
+              <in>l2c_api.h</in>
+              <in>l2cap_client.h</in>
+              <in>l2cdefs.h</in>
+              <in>port_api.h</in>
+              <in>port_ext.h</in>
+              <in>profiles_api.h</in>
+              <in>rfcdefs.h</in>
+              <in>sdp_api.h</in>
+              <in>sdpdefs.h</in>
+              <in>smp_api.h</in>
+            </df>
+            <df name="l2cap">
+              <df name="include">
+                <in>l2c_int.h</in>
+              </df>
+              <in>l2c_api.c</in>
+              <in>l2c_ble.c</in>
+              <in>l2c_csm.c</in>
+              <in>l2c_fcr.c</in>
+              <in>l2c_link.c</in>
+              <in>l2c_main.c</in>
+              <in>l2c_ucd.c</in>
+              <in>l2c_utils.c</in>
+              <in>l2cap_client.c</in>
+            </df>
+            <df name="rfcomm">
+              <df name="include">
+                <in>port_int.h</in>
+                <in>rfc_int.h</in>
+              </df>
+              <in>port_api.c</in>
+              <in>port_rfc.c</in>
+              <in>port_utils.c</in>
+              <in>rfc_l2cap_if.c</in>
+              <in>rfc_mx_fsm.c</in>
+              <in>rfc_port_fsm.c</in>
+              <in>rfc_port_if.c</in>
+              <in>rfc_ts_frames.c</in>
+              <in>rfc_utils.c</in>
+            </df>
+            <df name="sdp">
+              <df name="include">
+                <in>sdpint.h</in>
+              </df>
+              <in>sdp_api.c</in>
+              <in>sdp_db.c</in>
+              <in>sdp_discovery.c</in>
+              <in>sdp_main.c</in>
+              <in>sdp_server.c</in>
+              <in>sdp_utils.c</in>
+            </df>
+            <df name="smp">
+              <df name="include">
+                <in>aes.h</in>
+                <in>p_256_ecc_pp.h</in>
+                <in>p_256_multprecision.h</in>
+                <in>smp_int.h</in>
+              </df>
+              <in>aes.c</in>
+              <in>p_256_curvepara.c</in>
+              <in>p_256_ecc_pp.c</in>
+              <in>p_256_multprecision.c</in>
+              <in>smp_act.c</in>
+              <in>smp_api.c</in>
+              <in>smp_br_main.c</in>
+              <in>smp_cmac.c</in>
+              <in>smp_keys.c</in>
+              <in>smp_l2c.c</in>
+              <in>smp_main.c</in>
+              <in>smp_utils.c</in>
+            </df>
+          </df>
+        </df>
+        <df name="include">
+          <in>bt.h</in>
+          <in>esp_bt.h</in>
+        </df>
+        <df name="lib">
+        </df>
+        <in>bt.c</in>
+      </df>
+      <df name="coap">
+        <df name="libcoap">
+          <df name="doc">
+          </df>
+          <df name="examples">
+            <df name="contiki">
+              <in>coap-observer.c</in>
+              <in>coap_config.h</in>
+              <in>server.c</in>
+            </df>
+            <df name="lwip">
+              <in>coap_config.h</in>
+              <in>lwipopts.h</in>
+              <in>server-coap.c</in>
+              <in>server-coap.h</in>
+              <in>server.c</in>
+            </df>
+            <in>client.c</in>
+            <in>coap-rd.c</in>
+            <in>coap-server.c</in>
+            <in>coap_list.c</in>
+            <in>coap_list.h</in>
+            <in>etsi_iot_01.c</in>
+            <in>tiny.c</in>
+          </df>
+          <df name="include">
+            <df name="coap">
+              <in>address.h</in>
+              <in>async.h</in>
+              <in>bits.h</in>
+              <in>block.h</in>
+              <in>coap_io.h</in>
+              <in>coap_time.h</in>
+              <in>debug.h</in>
+              <in>encode.h</in>
+              <in>hashkey.h</in>
+              <in>libcoap.h</in>
+              <in>lwippools.h</in>
+              <in>mem.h</in>
+              <in>net.h</in>
+              <in>option.h</in>
+              <in>pdu.h</in>
+              <in>prng.h</in>
+              <in>resource.h</in>
+              <in>str.h</in>
+              <in>subscribe.h</in>
+              <in>uri.h</in>
+              <in>uthash.h</in>
+              <in>utlist.h</in>
+            </df>
+          </df>
+          <df name="m4">
+          </df>
+          <df name="scripts">
+          </df>
+          <df name="src">
+            <in>address.c</in>
+            <in>async.c</in>
+            <in>block.c</in>
+            <in>coap_io.c</in>
+            <in>coap_io_lwip.c</in>
+            <in>coap_time.c</in>
+            <in>debug.c</in>
+            <in>encode.c</in>
+            <in>hashkey.c</in>
+            <in>mem.c</in>
+            <in>net.c</in>
+            <in>option.c</in>
+            <in>pdu.c</in>
+            <in>resource.c</in>
+            <in>str.c</in>
+            <in>subscribe.c</in>
+            <in>uri.c</in>
+          </df>
+          <df name="tests">
+            <in>test_error_response.c</in>
+            <in>test_error_response.h</in>
+            <in>test_options.c</in>
+            <in>test_options.h</in>
+            <in>test_pdu.c</in>
+            <in>test_pdu.h</in>
+            <in>test_sendqueue.c</in>
+            <in>test_sendqueue.h</in>
+            <in>test_uri.c</in>
+            <in>test_uri.h</in>
+            <in>test_wellknown.c</in>
+            <in>test_wellknown.h</in>
+            <in>testdriver.c</in>
+          </df>
+        </df>
+        <df name="port">
+          <df name="include">
+            <df name="coap">
+              <in>coap.h</in>
+            </df>
+            <in>coap_config.h</in>
+            <in>coap_config_posix.h</in>
+          </df>
+          <in>coap_io_socket.c</in>
+        </df>
+      </df>
+      <df name="console">
+        <df name="argtable3">
+          <in>argtable3.c</in>
+          <in>argtable3.h</in>
+        </df>
+        <df name="linenoise">
+          <in>linenoise.c</in>
+          <in>linenoise.h</in>
+        </df>
+        <in>commands.c</in>
+        <in>esp_console.h</in>
+        <in>split_argv.c</in>
+      </df>
+      <df name="cxx">
+        <df name="test">
+          <in>test_cxx.cpp</in>
+        </df>
+        <in>cxx_exception_stubs.cpp</in>
+        <in>cxx_guards.cpp</in>
+      </df>
+      <df name="driver">
+        <df name="include">
+          <df name="driver">
+          </df>
+        </df>
+        <df name="test">
+        </df>
+      </df>
+      <df name="esp32">
+        <df name="hwcrypto">
+          <in>aes.c</in>
+          <in>sha.c</in>
+        </df>
+        <df name="include">
+          <df name="esp32">
+            <in>pm.h</in>
+          </df>
+          <df name="hwcrypto">
+            <in>aes.h</in>
+            <in>sha.h</in>
+          </df>
+          <df name="rom">
+            <in>aes.h</in>
+            <in>bigint.h</in>
+            <in>cache.h</in>
+            <in>crc.h</in>
+            <in>efuse.h</in>
+            <in>ets_sys.h</in>
+            <in>gpio.h</in>
+            <in>libc_stubs.h</in>
+            <in>lldesc.h</in>
+            <in>md5_hash.h</in>
+            <in>miniz.h</in>
+            <in>queue.h</in>
+            <in>rtc.h</in>
+            <in>secure_boot.h</in>
+            <in>sha.h</in>
+            <in>spi_flash.h</in>
+            <in>tbconsole.h</in>
+            <in>tjpgd.h</in>
+            <in>uart.h</in>
+          </df>
+          <df name="xtensa">
+            <df name="config">
+              <in>core-isa.h</in>
+              <in>core-matmap.h</in>
+              <in>core.h</in>
+              <in>defs.h</in>
+              <in>specreg.h</in>
+              <in>system.h</in>
+              <in>tie-asm.h</in>
+              <in>tie.h</in>
+            </df>
+            <df name="tie">
+              <in>xt_DFP_assist.h</in>
+              <in>xt_FP.h</in>
+              <in>xt_MAC16.h</in>
+              <in>xt_MUL32.h</in>
+              <in>xt_booleans.h</in>
+              <in>xt_coprocessors.h</in>
+              <in>xt_core.h</in>
+              <in>xt_debug.h</in>
+              <in>xt_density.h</in>
+              <in>xt_exceptions.h</in>
+              <in>xt_externalregisters.h</in>
+              <in>xt_integerdivide.h</in>
+              <in>xt_interrupt.h</in>
+              <in>xt_ioports.h</in>
+              <in>xt_misc.h</in>
+              <in>xt_mmu.h</in>
+              <in>xt_mul.h</in>
+              <in>xt_regwin.h</in>
+              <in>xt_scmpr.h</in>
+              <in>xt_sync.h</in>
+              <in>xt_timer.h</in>
+              <in>xt_trace.h</in>
+            </df>
+            <df name="xtav110">
+              <df name="xtensa">
+                <in>board.h</in>
+              </df>
+            </df>
+            <df name="xtav200">
+              <df name="xtensa">
+                <in>board.h</in>
+              </df>
+            </df>
+            <df name="xtav60">
+              <df name="xtensa">
+                <in>board.h</in>
+                <in>lcd-splc780d-board.h</in>
+              </df>
+            </df>
+            <df name="xtkc705">
+              <df name="xtensa">
+                <in>board.h</in>
+              </df>
+            </df>
+            <df name="xtml605">
+              <df name="xtensa">
+                <in>board.h</in>
+              </df>
+            </df>
+            <in>board.h</in>
+            <in>c6x-compat.h</in>
+            <in>cacheasm.h</in>
+            <in>cacheattrasm.h</in>
+            <in>core-macros.h</in>
+            <in>coreasm.h</in>
+            <in>corebits.h</in>
+            <in>debugfs.h</in>
+            <in>feedback.h</in>
+            <in>gdbio.h</in>
+            <in>hal.h</in>
+            <in>jtag-xtensa.h</in>
+            <in>lcd-splc780d-4bitmode-board.h</in>
+            <in>lcd-splc780d-4bitmode.h</in>
+            <in>lcd-splc780d.h</in>
+            <in>overlay.h</in>
+            <in>overlay_os_asm.h</in>
+            <in>sim.h</in>
+            <in>simboard.h</in>
+            <in>simcall-errno.h</in>
+            <in>simcall-fcntl.h</in>
+            <in>simcall.h</in>
+            <in>specreg.h</in>
+            <in>trax-api.h</in>
+            <in>trax-core-config.h</in>
+            <in>trax-proto.h</in>
+            <in>trax-util.h</in>
+            <in>trax.h</in>
+            <in>traxfile.h</in>
+            <in>traxreg.h</in>
+            <in>uart-16550-board.h</in>
+            <in>uart-16550.h</in>
+            <in>udma.h</in>
+            <in>xdm-regs.h</in>
+            <in>xmon.h</in>
+            <in>xmp-library.h</in>
+            <in>xos.h</in>
+            <in>xos_common.h</in>
+            <in>xos_cond.h</in>
+            <in>xos_errors.h</in>
+            <in>xos_event.h</in>
+            <in>xos_internal.h</in>
+            <in>xos_msgq.h</in>
+            <in>xos_mutex.h</in>
+            <in>xos_params.h</in>
+            <in>xos_regaccess.h</in>
+            <in>xos_semaphore.h</in>
+            <in>xos_stopwatch.h</in>
+            <in>xos_syslog.h</in>
+            <in>xos_thread.h</in>
+            <in>xos_timer.h</in>
+            <in>xos_types.h</in>
+            <in>xt_perf_consts.h</in>
+            <in>xt_perfmon.h</in>
+            <in>xt_profiling.h</in>
+            <in>xt_reftb.h</in>
+            <in>xtav110.h</in>
+            <in>xtav200.h</in>
+            <in>xtav60.h</in>
+            <in>xtbsp.h</in>
+            <in>xtensa-libdb-macros.h</in>
+            <in>xtensa-versions.h</in>
+            <in>xtensa-xer.h</in>
+            <in>xtkc705.h</in>
+            <in>xtload-api.h</in>
+            <in>xtml605.h</in>
+            <in>xtruntime-core-state.h</in>
+            <in>xtruntime-frames.h</in>
+            <in>xtruntime.h</in>
+            <in>xtutil.h</in>
+          </df>
+          <in>esp_assert.h</in>
+          <in>esp_attr.h</in>
+          <in>esp_brownout.h</in>
+          <in>esp_cache_err_int.h</in>
+          <in>esp_clk.h</in>
+          <in>esp_coexist.h</in>
+          <in>esp_core_dump.h</in>
+          <in>esp_crosscore_int.h</in>
+          <in>esp_deep_sleep.h</in>
+          <in>esp_deepsleep.h</in>
+          <in>esp_dport_access.h</in>
+          <in>esp_err.h</in>
+          <in>esp_event.h</in>
+          <in>esp_event_loop.h</in>
+          <in>esp_flash_data_types.h</in>
+          <in>esp_freertos_hooks.h</in>
+          <in>esp_gdbstub.h</in>
+          <in>esp_int_wdt.h</in>
+          <in>esp_interface.h</in>
+          <in>esp_intr.h</in>
+          <in>esp_intr_alloc.h</in>
+          <in>esp_ipc.h</in>
+          <in>esp_now.h</in>
+          <in>esp_panic.h</in>
+          <in>esp_phy_init.h</in>
+          <in>esp_pm.h</in>
+          <in>esp_sleep.h</in>
+          <in>esp_smartconfig.h</in>
+          <in>esp_spiram.h</in>
+          <in>esp_ssc.h</in>
+          <in>esp_system.h</in>
+          <in>esp_task.h</in>
+          <in>esp_task_wdt.h</in>
+          <in>esp_timer.h</in>
+          <in>esp_types.h</in>
+          <in>esp_wifi.h</in>
+          <in>esp_wifi_crypto_types.h</in>
+          <in>esp_wifi_internal.h</in>
+          <in>esp_wifi_types.h</in>
+          <in>esp_wpa2.h</in>
+          <in>esp_wps.h</in>
+        </df>
+        <df name="ld">
+        </df>
+        <df name="lib">
+        </df>
+        <df name="test">
+          <in>test_ahb_arb.c</in>
+          <in>test_ahb_arb_asm.S</in>
+          <in>test_delay.c</in>
+          <in>test_dport.c</in>
+          <in>test_esp_timer.c</in>
+          <in>test_ets_timer.c</in>
+          <in>test_exception.c</in>
+          <in>test_fastbus.c</in>
+          <in>test_fastbus_asm.S</in>
+          <in>test_fp.c</in>
+          <in>test_int_wdt.c</in>
+          <in>test_intr_alloc.c</in>
+          <in>test_miniz.c</in>
+          <in>test_pm.c</in>
+          <in>test_restart.c</in>
+          <in>test_sleep.c</in>
+          <in>test_spiram_cache_flush.c</in>
+          <in>test_stack_check.c</in>
+          <in>test_stack_check_cxx.cpp</in>
+          <in>test_tjpgd.c</in>
+          <in>test_tsens.c</in>
+          <in>test_unal_dma.c</in>
+        </df>
+        <in>brownout.c</in>
+        <in>cache_err_int.c</in>
+        <in>clk.c</in>
+        <in>core_dump.c</in>
+        <in>cpu_start.c</in>
+        <in>crosscore_int.c</in>
+        <in>dport_access.c</in>
+        <in>dport_panic_highint_hdl.S</in>
+        <in>esp_clk_internal.h</in>
+        <in>esp_timer.c</in>
+        <in>esp_timer_esp32.c</in>
+        <in>esp_timer_impl.h</in>
+        <in>ets_timer_legacy.c</in>
+        <in>event_default_handlers.c</in>
+        <in>event_loop.c</in>
+        <in>fast_crypto_ops.c</in>
+        <in>freertos_hooks.c</in>
+        <in>gdbstub.c</in>
+        <in>hw_random.c</in>
+        <in>int_wdt.c</in>
+        <in>intr_alloc.c</in>
+        <in>ipc.c</in>
+        <in>lib_printf.c</in>
+        <in>panic.c</in>
+        <in>phy.h</in>
+        <in>phy_init.c</in>
+        <in>phy_init_data.h</in>
+        <in>pm_esp32.c</in>
+        <in>pm_impl.h</in>
+        <in>pm_locks.c</in>
+        <in>pm_trace.c</in>
+        <in>pm_trace.h</in>
+        <in>restore.c</in>
+        <in>sleep_modes.c</in>
+        <in>smartconfig.c</in>
+        <in>smartconfig.h</in>
+        <in>spiram.c</in>
+        <in>spiram_psram.c</in>
+        <in>spiram_psram.h</in>
+        <in>stack_check.c</in>
+        <in>system_api.c</in>
+        <in>task_wdt.c</in>
+        <in>wifi_init.c</in>
+        <in>wifi_internal.c</in>
+      </df>
+      <df name="esp_adc_cal">
+        <df name="include">
+          <in>esp_adc_cal.h</in>
+        </df>
+        <in>esp_adc_cal.c</in>
+        <in>esp_adc_cal_lookup_tables.c</in>
+      </df>
+      <df name="espcoredump">
+        <df name="test">
+          <in>test_core_dump.c</in>
+        </df>
+      </df>
+      <df name="esptool_py">
+        <df name="esptool">
+          <df name="ecdsa">
+          </df>
+          <df name="flasher_stub">
+            <in>miniz.c</in>
+            <in>miniz.h</in>
+            <in>rom_esp32.h</in>
+            <in>rom_esp8266.h</in>
+            <in>rom_functions.h</in>
+            <in>slip.c</in>
+            <in>slip.h</in>
+            <in>soc_support.h</in>
+            <in>stub_commands.c</in>
+            <in>stub_commands.h</in>
+            <in>stub_flasher.c</in>
+            <in>stub_flasher.h</in>
+            <in>stub_write_flash.c</in>
+            <in>stub_write_flash.h</in>
+          </df>
+          <df name="pyaes">
+          </df>
+          <df name="test">
+            <df name="elf2image">
+            </df>
+            <df name="images">
+              <df name="esp8266_sdk">
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="ethernet">
+        <df name="eth_phy">
+          <in>phy_common.c</in>
+          <in>phy_lan8720.c</in>
+          <in>phy_tlk110.c</in>
+        </df>
+        <df name="include">
+          <df name="eth_phy">
+            <in>phy.h</in>
+            <in>phy_lan8720.h</in>
+            <in>phy_reg.h</in>
+            <in>phy_tlk110.h</in>
+          </df>
+          <in>esp_eth.h</in>
+        </df>
+        <in>emac_common.h</in>
+        <in>emac_desc.h</in>
+        <in>emac_dev.c</in>
+        <in>emac_dev.h</in>
+        <in>emac_main.c</in>
+      </df>
+      <df name="expat">
+        <df name="include">
+          <df name="expat">
+            <in>ascii.h</in>
+            <in>asciitab.h</in>
+            <in>expat.h</in>
+            <in>expat_config.h</in>
+            <in>expat_external.h</in>
+            <in>iasciitab.h</in>
+            <in>internal.h</in>
+            <in>latin1tab.h</in>
+            <in>nametab.h</in>
+            <in>utf8tab.h</in>
+            <in>xmlrole.h</in>
+            <in>xmltok.h</in>
+            <in>xmltok_impl.h</in>
+          </df>
+        </df>
+        <df name="library">
+          <in>xmlparse.c</in>
+          <in>xmlrole.c</in>
+          <in>xmltok.c</in>
+          <in>xmltok_impl.c</in>
+          <in>xmltok_ns.c</in>
+        </df>
+        <df name="port">
+          <df name="include">
+            <in>chardata.h</in>
+            <in>minicheck.h</in>
+          </df>
+          <in>chardata.c</in>
+          <in>expat_element.c</in>
+          <in>minicheck.c</in>
+        </df>
+      </df>
+      <df name="fatfs">
+        <df name="src">
+          <in>diskio.c</in>
+          <in>diskio.h</in>
+          <in>diskio_sdmmc.c</in>
+          <in>diskio_spiflash.c</in>
+          <in>diskio_spiflash.h</in>
+          <in>esp_vfs_fat.h</in>
+          <in>ff.c</in>
+          <in>ff.h</in>
+          <in>ffconf.h</in>
+          <in>ffsystem.c</in>
+          <in>ffunicode.c</in>
+          <in>integer.h</in>
+          <in>vfs_fat.c</in>
+          <in>vfs_fat_sdmmc.c</in>
+          <in>vfs_fat_spiflash.c</in>
+        </df>
+        <df name="test">
+          <in>test_fatfs_common.c</in>
+          <in>test_fatfs_common.h</in>
+          <in>test_fatfs_sdmmc.c</in>
+          <in>test_fatfs_spiflash.c</in>
+        </df>
+      </df>
+      <df name="freertos">
+        <df name="include">
+          <df name="freertos">
+            <in>FreeRTOS.h</in>
+            <in>FreeRTOSConfig.h</in>
+            <in>StackMacros.h</in>
+            <in>croutine.h</in>
+            <in>deprecated_definitions.h</in>
+            <in>event_groups.h</in>
+            <in>list.h</in>
+            <in>mpu_wrappers.h</in>
+            <in>portable.h</in>
+            <in>portbenchmark.h</in>
+            <in>portmacro.h</in>
+            <in>porttrace.h</in>
+            <in>projdefs.h</in>
+            <in>queue.h</in>
+            <in>ringbuf.h</in>
+            <in>semphr.h</in>
+            <in>task.h</in>
+            <in>timers.h</in>
+            <in>xtensa_api.h</in>
+            <in>xtensa_config.h</in>
+            <in>xtensa_context.h</in>
+            <in>xtensa_rtos.h</in>
+            <in>xtensa_timer.h</in>
+          </df>
+        </df>
+        <df name="test">
+          <in>test_freertos.c</in>
+          <in>test_freertos_backported_functions.c</in>
+          <in>test_freertos_debug_functions.c</in>
+          <in>test_freertos_eventgroups.c</in>
+          <in>test_freertos_get_state.c</in>
+          <in>test_freertos_isinisrcontext.c</in>
+          <in>test_freertos_task_delay_until.c</in>
+          <in>test_freertos_task_delete.c</in>
+          <in>test_freertos_task_notify.c</in>
+          <in>test_freertos_trace_utilities.c</in>
+          <in>test_newlib_reent.c</in>
+          <in>test_panic.c</in>
+          <in>test_preemption.c</in>
+          <in>test_ringbuf.c</in>
+          <in>test_spinlocks.c</in>
+          <in>test_suspend_scheduler.c</in>
+          <in>test_task_priorities.c</in>
+          <in>test_task_suspend_resume.c</in>
+          <in>test_tasks_snapshot.c</in>
+          <in>test_timers.c</in>
+        </df>
+        <in>FreeRTOS-openocd.c</in>
+        <in>croutine.c</in>
+        <in>event_groups.c</in>
+        <in>list.c</in>
+        <in>port.c</in>
+        <in>portasm.S</in>
+        <in>portmux_impl.h</in>
+        <in>queue.c</in>
+        <in>ringbuf.c</in>
+        <in>tasks.c</in>
+        <in>timers.c</in>
+        <in>xtensa_context.S</in>
+        <in>xtensa_init.c</in>
+        <in>xtensa_intr.c</in>
+        <in>xtensa_intr_asm.S</in>
+        <in>xtensa_overlay_os_hook.c</in>
+        <in>xtensa_vector_defaults.S</in>
+        <in>xtensa_vectors.S</in>
+      </df>
+      <df name="heap">
+        <df name="include">
+          <in>esp_heap_alloc_caps.h</in>
+          <in>esp_heap_caps.h</in>
+          <in>esp_heap_caps_init.h</in>
+          <in>esp_heap_trace.h</in>
+          <in>multi_heap.h</in>
+        </df>
+        <df name="test">
+          <in>test_heap_trace.c</in>
+          <in>test_malloc.c</in>
+          <in>test_malloc_caps.c</in>
+          <in>test_runtime_heap_reg.c</in>
+        </df>
+        <df name="test_multi_heap_host">
+          <in>main.cpp</in>
+          <in>test_multi_heap.cpp</in>
+        </df>
+        <in>heap_caps.c</in>
+        <in>heap_caps_init.c</in>
+        <in>heap_private.h</in>
+        <in>heap_trace.c</in>
+        <in>multi_heap.c</in>
+        <in>multi_heap_config.h</in>
+        <in>multi_heap_internal.h</in>
+        <in>multi_heap_platform.h</in>
+        <in>multi_heap_poisoning.c</in>
+      </df>
+      <df name="idf_test">
+        <df name="include">
+          <in>idf_performance.h</in>
+        </df>
+        <df name="integration_test">
+          <df name="CIConfigs">
+          </df>
+          <df name="TestCaseScript">
+            <df name="BLEFunction">
+            </df>
+            <df name="NVSTest">
+            </df>
+            <df name="TCPStress">
+            </df>
+            <df name="UDPStress">
+            </df>
+            <df name="WiFiStress">
+            </df>
+          </df>
+        </df>
+        <df name="unit_test">
+          <df name="TestCaseScript">
+            <df name="IDFUnitTest">
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="jsmn">
+        <df name="include">
+          <in>jsmn.h</in>
+        </df>
+        <df name="src">
+          <in>jsmn.c</in>
+        </df>
+      </df>
+      <df name="json">
+        <df name="include">
+          <in>cJSON.h</in>
+        </df>
+        <df name="library">
+          <in>cJSON.c</in>
+        </df>
+        <df name="port">
+          <df name="include">
+            <in>cJSON_Utils.h</in>
+          </df>
+          <in>cJSON_Utils.c</in>
+        </df>
+      </df>
+      <df name="libsodium">
+        <df name="libsodium">
+          <df name="builds">
+            <df name="msvc">
+              <df name="build">
+              </df>
+              <df name="properties">
+              </df>
+              <df name="vs2010">
+                <df name="libsodium">
+                </df>
+              </df>
+              <df name="vs2012">
+                <df name="libsodium">
+                </df>
+              </df>
+              <df name="vs2013">
+                <df name="libsodium">
+                </df>
+              </df>
+              <df name="vs2015">
+                <df name="libsodium">
+                </df>
+              </df>
+              <df name="vs2017">
+                <df name="libsodium">
+                </df>
+              </df>
+              <in>version.h</in>
+            </df>
+          </df>
+          <df name="contrib">
+          </df>
+          <df name="dist-build">
+          </df>
+          <df name="m4">
+          </df>
+          <df name="msvc-scripts">
+          </df>
+          <df name="packaging">
+            <df name="dotnet-core">
+              <df name="recipes">
+              </df>
+            </df>
+            <df name="nuget">
+            </df>
+          </df>
+          <df name="src">
+            <df name="libsodium">
+              <df name="crypto_aead">
+                <df name="aes256gcm">
+                  <df name="aesni">
+                    <in>aead_aes256gcm_aesni.c</in>
+                  </df>
+                </df>
+                <df name="chacha20poly1305">
+                  <df name="sodium">
+                    <in>aead_chacha20poly1305.c</in>
+                  </df>
+                </df>
+                <df name="xchacha20poly1305">
+                  <df name="sodium">
+                    <in>aead_xchacha20poly1305.c</in>
+                  </df>
+                </df>
+              </df>
+              <df name="crypto_auth">
+                <df name="hmacsha256">
+                  <in>auth_hmacsha256.c</in>
+                </df>
+                <df name="hmacsha512">
+                  <in>auth_hmacsha512.c</in>
+                </df>
+                <df name="hmacsha512256">
+                  <in>auth_hmacsha512256.c</in>
+                </df>
+                <in>crypto_auth.c</in>
+              </df>
+              <df name="crypto_box">
+                <df name="curve25519xchacha20poly1305">
+                  <in>box_curve25519xchacha20poly1305.c</in>
+                </df>
+                <df name="curve25519xsalsa20poly1305">
+                  <in>box_curve25519xsalsa20poly1305.c</in>
+                </df>
+                <in>crypto_box.c</in>
+                <in>crypto_box_easy.c</in>
+                <in>crypto_box_seal.c</in>
+              </df>
+              <df name="crypto_core">
+                <df name="curve25519">
+                  <df name="ref10">
+                    <in>base.h</in>
+                    <in>base2.h</in>
+                    <in>curve25519_ref10.c</in>
+                  </df>
+                </df>
+                <df name="hchacha20">
+                  <in>core_hchacha20.c</in>
+                </df>
+                <df name="hsalsa20">
+                  <df name="ref2">
+                    <in>core_hsalsa20_ref2.c</in>
+                  </df>
+                  <in>core_hsalsa20.c</in>
+                </df>
+                <df name="salsa">
+                  <df name="ref">
+                    <in>core_salsa_ref.c</in>
+                  </df>
+                </df>
+              </df>
+              <df name="crypto_generichash">
+                <df name="blake2b">
+                  <df name="ref">
+                    <in>blake2.h</in>
+                    <in>blake2b-compress-avx2.c</in>
+                    <in>blake2b-compress-avx2.h</in>
+                    <in>blake2b-compress-ref.c</in>
+                    <in>blake2b-compress-sse41.c</in>
+                    <in>blake2b-compress-sse41.h</in>
+                    <in>blake2b-compress-ssse3.c</in>
+                    <in>blake2b-compress-ssse3.h</in>
+                    <in>blake2b-load-avx2.h</in>
+                    <in>blake2b-load-sse2.h</in>
+                    <in>blake2b-load-sse41.h</in>
+                    <in>blake2b-ref.c</in>
+                    <in>generichash_blake2b.c</in>
+                  </df>
+                  <in>generichash_blake2.c</in>
+                </df>
+                <in>crypto_generichash.c</in>
+              </df>
+              <df name="crypto_hash">
+                <df name="sha256">
+                  <df name="cp">
+                    <in>hash_sha256_cp.c</in>
+                  </df>
+                  <in>hash_sha256.c</in>
+                </df>
+                <df name="sha512">
+                  <df name="cp">
+                    <in>hash_sha512_cp.c</in>
+                  </df>
+                  <in>hash_sha512.c</in>
+                </df>
+                <in>crypto_hash.c</in>
+              </df>
+              <df name="crypto_kdf">
+                <df name="blake2b">
+                  <in>kdf_blake2b.c</in>
+                </df>
+                <in>crypto_kdf.c</in>
+              </df>
+              <df name="crypto_kx">
+                <in>crypto_kx.c</in>
+              </df>
+              <df name="crypto_onetimeauth">
+                <df name="poly1305">
+                  <df name="donna">
+                    <in>poly1305_donna.c</in>
+                    <in>poly1305_donna.h</in>
+                    <in>poly1305_donna32.h</in>
+                    <in>poly1305_donna64.h</in>
+                  </df>
+                  <df name="sse2">
+                    <in>poly1305_sse2.c</in>
+                    <in>poly1305_sse2.h</in>
+                  </df>
+                  <in>onetimeauth_poly1305.c</in>
+                  <in>onetimeauth_poly1305.h</in>
+                </df>
+                <in>crypto_onetimeauth.c</in>
+              </df>
+              <df name="crypto_pwhash">
+                <df name="argon2">
+                  <in>argon2-core.c</in>
+                  <in>argon2-core.h</in>
+                  <in>argon2-encoding.c</in>
+                  <in>argon2-encoding.h</in>
+                  <in>argon2-fill-block-ref.c</in>
+                  <in>argon2-fill-block-ssse3.c</in>
+                  <in>argon2.c</in>
+                  <in>argon2.h</in>
+                  <in>blake2b-long.c</in>
+                  <in>blake2b-long.h</in>
+                  <in>blamka-round-ref.h</in>
+                  <in>blamka-round-ssse3.h</in>
+                  <in>pwhash_argon2i.c</in>
+                </df>
+                <df name="scryptsalsa208sha256">
+                  <df name="nosse">
+                    <in>pwhash_scryptsalsa208sha256_nosse.c</in>
+                  </df>
+                  <df name="sse">
+                    <in>pwhash_scryptsalsa208sha256_sse.c</in>
+                  </df>
+                  <in>crypto_scrypt-common.c</in>
+                  <in>crypto_scrypt.h</in>
+                  <in>pbkdf2-sha256.c</in>
+                  <in>pbkdf2-sha256.h</in>
+                  <in>pwhash_scryptsalsa208sha256.c</in>
+                  <in>scrypt_platform.c</in>
+                </df>
+                <in>crypto_pwhash.c</in>
+              </df>
+              <df name="crypto_scalarmult">
+                <df name="curve25519">
+                  <df name="donna_c64">
+                    <in>curve25519_donna_c64.c</in>
+                    <in>curve25519_donna_c64.h</in>
+                  </df>
+                  <df name="ref10">
+                    <in>x25519_ref10.c</in>
+                    <in>x25519_ref10.h</in>
+                  </df>
+                  <df name="sandy2x">
+                    <in>consts.S</in>
+                    <in>consts_namespace.h</in>
+                    <in>curve25519_sandy2x.c</in>
+                    <in>curve25519_sandy2x.h</in>
+                    <in>fe.h</in>
+                    <in>fe51.h</in>
+                    <in>fe51_invert.c</in>
+                    <in>fe51_mul.S</in>
+                    <in>fe51_namespace.h</in>
+                    <in>fe51_nsquare.S</in>
+                    <in>fe51_pack.S</in>
+                    <in>fe_frombytes_sandy2x.c</in>
+                    <in>ladder.S</in>
+                    <in>ladder.h</in>
+                    <in>ladder_base.S</in>
+                    <in>ladder_base.h</in>
+                    <in>ladder_base_namespace.h</in>
+                    <in>ladder_namespace.h</in>
+                    <in>sandy2x.S</in>
+                  </df>
+                  <in>scalarmult_curve25519.c</in>
+                  <in>scalarmult_curve25519.h</in>
+                </df>
+                <in>crypto_scalarmult.c</in>
+              </df>
+              <df name="crypto_secretbox">
+                <df name="xchacha20poly1305">
+                  <in>secretbox_xchacha20poly1305.c</in>
+                </df>
+                <df name="xsalsa20poly1305">
+                  <in>secretbox_xsalsa20poly1305.c</in>
+                </df>
+                <in>crypto_secretbox.c</in>
+                <in>crypto_secretbox_easy.c</in>
+              </df>
+              <df name="crypto_shorthash">
+                <df name="siphash24">
+                  <df name="ref">
+                    <in>shorthash_siphash24_ref.c</in>
+                    <in>shorthash_siphash_ref.h</in>
+                    <in>shorthash_siphashx24_ref.c</in>
+                  </df>
+                  <in>shorthash_siphash24.c</in>
+                  <in>shorthash_siphashx24.c</in>
+                </df>
+                <in>crypto_shorthash.c</in>
+              </df>
+              <df name="crypto_sign">
+                <df name="ed25519">
+                  <df name="ref10">
+                    <in>ed25519_ref10.h</in>
+                    <in>keypair.c</in>
+                    <in>obsolete.c</in>
+                    <in>open.c</in>
+                    <in>sign.c</in>
+                  </df>
+                  <in>sign_ed25519.c</in>
+                </df>
+                <in>crypto_sign.c</in>
+              </df>
+              <df name="crypto_stream">
+                <df name="aes128ctr">
+                  <df name="nacl">
+                    <in>afternm_aes128ctr.c</in>
+                    <in>beforenm_aes128ctr.c</in>
+                    <in>common.h</in>
+                    <in>consts.h</in>
+                    <in>consts_aes128ctr.c</in>
+                    <in>int128.h</in>
+                    <in>int128_aes128ctr.c</in>
+                    <in>stream_aes128ctr_nacl.c</in>
+                    <in>xor_afternm_aes128ctr.c</in>
+                  </df>
+                  <in>stream_aes128ctr.c</in>
+                </df>
+                <df name="chacha20">
+                  <df name="dolbeau">
+                    <in>chacha20_dolbeau-avx2.c</in>
+                    <in>chacha20_dolbeau-avx2.h</in>
+                    <in>chacha20_dolbeau-ssse3.c</in>
+                    <in>chacha20_dolbeau-ssse3.h</in>
+                    <in>u0.h</in>
+                    <in>u1.h</in>
+                    <in>u4.h</in>
+                    <in>u8.h</in>
+                  </df>
+                  <df name="ref">
+                    <in>chacha20_ref.c</in>
+                    <in>chacha20_ref.h</in>
+                  </df>
+                  <in>stream_chacha20.c</in>
+                  <in>stream_chacha20.h</in>
+                </df>
+                <df name="salsa20">
+                  <df name="ref">
+                    <in>salsa20_ref.c</in>
+                    <in>salsa20_ref.h</in>
+                  </df>
+                  <df name="xmm6">
+                    <in>salsa20_xmm6-asm.S</in>
+                    <in>salsa20_xmm6.c</in>
+                    <in>salsa20_xmm6.h</in>
+                  </df>
+                  <df name="xmm6int">
+                    <in>salsa20_xmm6int-avx2.c</in>
+                    <in>salsa20_xmm6int-avx2.h</in>
+                    <in>salsa20_xmm6int-sse2.c</in>
+                    <in>salsa20_xmm6int-sse2.h</in>
+                    <in>u0.h</in>
+                    <in>u1.h</in>
+                    <in>u4.h</in>
+                    <in>u8.h</in>
+                  </df>
+                  <in>stream_salsa20.c</in>
+                  <in>stream_salsa20.h</in>
+                </df>
+                <df name="salsa2012">
+                  <df name="ref">
+                    <in>stream_salsa2012_ref.c</in>
+                  </df>
+                  <in>stream_salsa2012.c</in>
+                </df>
+                <df name="salsa208">
+                  <df name="ref">
+                    <in>stream_salsa208_ref.c</in>
+                  </df>
+                  <in>stream_salsa208.c</in>
+                </df>
+                <df name="xchacha20">
+                  <in>stream_xchacha20.c</in>
+                </df>
+                <df name="xsalsa20">
+                  <in>stream_xsalsa20.c</in>
+                </df>
+                <in>crypto_stream.c</in>
+              </df>
+              <df name="crypto_verify">
+                <df name="sodium">
+                  <in>verify.c</in>
+                </df>
+              </df>
+              <df name="include">
+                <df name="sodium">
+                  <df name="private">
+                    <in>common.h</in>
+                    <in>curve25519_ref10.h</in>
+                    <in>mutex.h</in>
+                    <in>sse2_64_32.h</in>
+                  </df>
+                  <in>core.h</in>
+                  <in>crypto_aead_aes256gcm.h</in>
+                  <in>crypto_aead_chacha20poly1305.h</in>
+                  <in>crypto_aead_xchacha20poly1305.h</in>
+                  <in>crypto_auth.h</in>
+                  <in>crypto_auth_hmacsha256.h</in>
+                  <in>crypto_auth_hmacsha512.h</in>
+                  <in>crypto_auth_hmacsha512256.h</in>
+                  <in>crypto_box.h</in>
+                  <in>crypto_box_curve25519xchacha20poly1305.h</in>
+                  <in>crypto_box_curve25519xsalsa20poly1305.h</in>
+                  <in>crypto_core_hchacha20.h</in>
+                  <in>crypto_core_hsalsa20.h</in>
+                  <in>crypto_core_salsa20.h</in>
+                  <in>crypto_core_salsa2012.h</in>
+                  <in>crypto_core_salsa208.h</in>
+                  <in>crypto_generichash.h</in>
+                  <in>crypto_generichash_blake2b.h</in>
+                  <in>crypto_hash.h</in>
+                  <in>crypto_hash_sha256.h</in>
+                  <in>crypto_hash_sha512.h</in>
+                  <in>crypto_kdf.h</in>
+                  <in>crypto_kdf_blake2b.h</in>
+                  <in>crypto_kx.h</in>
+                  <in>crypto_onetimeauth.h</in>
+                  <in>crypto_onetimeauth_poly1305.h</in>
+                  <in>crypto_pwhash.h</in>
+                  <in>crypto_pwhash_argon2i.h</in>
+                  <in>crypto_pwhash_scryptsalsa208sha256.h</in>
+                  <in>crypto_scalarmult.h</in>
+                  <in>crypto_scalarmult_curve25519.h</in>
+                  <in>crypto_secretbox.h</in>
+                  <in>crypto_secretbox_xchacha20poly1305.h</in>
+                  <in>crypto_secretbox_xsalsa20poly1305.h</in>
+                  <in>crypto_shorthash.h</in>
+                  <in>crypto_shorthash_siphash24.h</in>
+                  <in>crypto_sign.h</in>
+                  <in>crypto_sign_ed25519.h</in>
+                  <in>crypto_sign_edwards25519sha512batch.h</in>
+                  <in>crypto_stream.h</in>
+                  <in>crypto_stream_aes128ctr.h</in>
+                  <in>crypto_stream_chacha20.h</in>
+                  <in>crypto_stream_salsa20.h</in>
+                  <in>crypto_stream_salsa2012.h</in>
+                  <in>crypto_stream_salsa208.h</in>
+                  <in>crypto_stream_xchacha20.h</in>
+                  <in>crypto_stream_xsalsa20.h</in>
+                  <in>crypto_verify_16.h</in>
+                  <in>crypto_verify_32.h</in>
+                  <in>crypto_verify_64.h</in>
+                  <in>export.h</in>
+                  <in>randombytes.h</in>
+                  <in>randombytes_nativeclient.h</in>
+                  <in>randombytes_salsa20_random.h</in>
+                  <in>randombytes_sysrandom.h</in>
+                  <in>runtime.h</in>
+                  <in>utils.h</in>
+                </df>
+                <in>sodium.h</in>
+              </df>
+              <df name="randombytes">
+                <df name="nativeclient">
+                  <in>randombytes_nativeclient.c</in>
+                </df>
+                <df name="salsa20">
+                  <in>randombytes_salsa20_random.c</in>
+                </df>
+                <df name="sysrandom">
+                  <in>randombytes_sysrandom.c</in>
+                </df>
+                <in>randombytes.c</in>
+              </df>
+              <df name="sodium">
+                <in>core.c</in>
+                <in>runtime.c</in>
+                <in>utils.c</in>
+                <in>version.c</in>
+              </df>
+            </df>
+          </df>
+          <df name="test">
+            <df name="default">
+              <in>aead_aes256gcm.c</in>
+              <in>aead_chacha20poly1305.c</in>
+              <in>aead_xchacha20poly1305.c</in>
+              <in>auth.c</in>
+              <in>auth2.c</in>
+              <in>auth3.c</in>
+              <in>auth5.c</in>
+              <in>auth6.c</in>
+              <in>auth7.c</in>
+              <in>box.c</in>
+              <in>box2.c</in>
+              <in>box7.c</in>
+              <in>box8.c</in>
+              <in>box_easy.c</in>
+              <in>box_easy2.c</in>
+              <in>box_seal.c</in>
+              <in>box_seed.c</in>
+              <in>chacha20.c</in>
+              <in>cmptest.h</in>
+              <in>core1.c</in>
+              <in>core2.c</in>
+              <in>core3.c</in>
+              <in>core4.c</in>
+              <in>core5.c</in>
+              <in>core6.c</in>
+              <in>ed25519_convert.c</in>
+              <in>generichash.c</in>
+              <in>generichash2.c</in>
+              <in>generichash3.c</in>
+              <in>hash.c</in>
+              <in>hash3.c</in>
+              <in>kdf.c</in>
+              <in>keygen.c</in>
+              <in>kx.c</in>
+              <in>onetimeauth.c</in>
+              <in>onetimeauth2.c</in>
+              <in>onetimeauth7.c</in>
+              <in>pwhash.c</in>
+              <in>pwhash_scrypt.c</in>
+              <in>pwhash_scrypt_ll.c</in>
+              <in>randombytes.c</in>
+              <in>scalarmult.c</in>
+              <in>scalarmult2.c</in>
+              <in>scalarmult5.c</in>
+              <in>scalarmult6.c</in>
+              <in>scalarmult7.c</in>
+              <in>secretbox.c</in>
+              <in>secretbox2.c</in>
+              <in>secretbox7.c</in>
+              <in>secretbox8.c</in>
+              <in>secretbox_easy.c</in>
+              <in>secretbox_easy2.c</in>
+              <in>shorthash.c</in>
+              <in>sign.c</in>
+              <in>siphashx24.c</in>
+              <in>sodium_core.c</in>
+              <in>sodium_utils.c</in>
+              <in>sodium_utils2.c</in>
+              <in>sodium_utils3.c</in>
+              <in>sodium_version.c</in>
+              <in>stream.c</in>
+              <in>stream2.c</in>
+              <in>stream3.c</in>
+              <in>stream4.c</in>
+              <in>verify1.c</in>
+              <in>xchacha20.c</in>
+            </df>
+            <df name="quirks">
+              <in>quirks.h</in>
+            </df>
+          </df>
+        </df>
+        <df name="port">
+          <df name="crypto_hash_mbedtls">
+            <in>crypto_hash_sha256_mbedtls.c</in>
+            <in>crypto_hash_sha512_mbedtls.c</in>
+          </df>
+          <in>randombytes_default.h</in>
+          <in>randombytes_esp32.c</in>
+        </df>
+        <df name="port_include">
+          <df name="sodium">
+            <in>version.h</in>
+          </df>
+        </df>
+        <df name="test">
+          <in>test_sodium.c</in>
+        </df>
+      </df>
+      <df name="log">
+        <df name="include">
+          <in>esp_log.h</in>
+          <in>esp_log_internal.h</in>
+        </df>
+        <in>log.c</in>
+      </df>
+      <df name="lwip">
+        <df name="api">
+          <in>api_lib.c</in>
+          <in>api_msg.c</in>
+          <in>err.c</in>
+          <in>netbuf.c</in>
+          <in>netdb.c</in>
+          <in>netifapi.c</in>
+          <in>pppapi.c</in>
+          <in>sockets.c</in>
+          <in>tcpip.c</in>
+        </df>
+        <df name="apps">
+          <df name="ping">
+            <in>esp_ping.c</in>
+            <in>esp_ping.h</in>
+            <in>ping.c</in>
+            <in>ping.h</in>
+          </df>
+          <df name="sntp">
+            <in>sntp.c</in>
+          </df>
+          <in>dhcpserver.c</in>
+        </df>
+        <df name="core">
+          <df name="ipv4">
+            <in>autoip.c</in>
+            <in>dhcp.c</in>
+            <in>icmp.c</in>
+            <in>igmp.c</in>
+            <in>ip4.c</in>
+            <in>ip4_addr.c</in>
+            <in>ip_frag.c</in>
+          </df>
+          <df name="ipv6">
+            <in>dhcp6.c</in>
+            <in>ethip6.c</in>
+            <in>icmp6.c</in>
+            <in>inet6.c</in>
+            <in>ip6.c</in>
+            <in>ip6_addr.c</in>
+            <in>ip6_frag.c</in>
+            <in>mld6.c</in>
+            <in>nd6.c</in>
+          </df>
+          <in>def.c</in>
+          <in>dns.c</in>
+          <in>inet_chksum.c</in>
+          <in>init.c</in>
+          <in>ip.c</in>
+          <in>mem.c</in>
+          <in>memp.c</in>
+          <in>netif.c</in>
+          <in>pbuf.c</in>
+          <in>raw.c</in>
+          <in>stats.c</in>
+          <in>sys.c</in>
+          <in>tcp.c</in>
+          <in>tcp_in.c</in>
+          <in>tcp_out.c</in>
+          <in>timers.c</in>
+          <in>udp.c</in>
+        </df>
+        <df name="include">
+          <df name="lwip">
+            <df name="apps">
+              <df name="sntp">
+                <in>sntp.h</in>
+                <in>sntp_opts.h</in>
+              </df>
+              <in>dhcpserver.h</in>
+              <in>dhcpserver_options.h</in>
+            </df>
+            <df name="lwip">
+              <df name="priv">
+                <in>api_msg.h</in>
+                <in>memp_priv.h</in>
+                <in>memp_std.h</in>
+                <in>tcp_priv.h</in>
+                <in>tcpip_priv.h</in>
+              </df>
+              <in>api.h</in>
+              <in>arch.h</in>
+              <in>autoip.h</in>
+              <in>debug.h</in>
+              <in>def.h</in>
+              <in>dhcp.h</in>
+              <in>dhcp6.h</in>
+              <in>dns.h</in>
+              <in>err.h</in>
+              <in>ethip6.h</in>
+              <in>icmp.h</in>
+              <in>icmp6.h</in>
+              <in>igmp.h</in>
+              <in>inet.h</in>
+              <in>inet_chksum.h</in>
+              <in>init.h</in>
+              <in>ip.h</in>
+              <in>ip4.h</in>
+              <in>ip4_addr.h</in>
+              <in>ip6.h</in>
+              <in>ip6_addr.h</in>
+              <in>ip6_frag.h</in>
+              <in>ip_addr.h</in>
+              <in>ip_frag.h</in>
+              <in>lwip_debug.h</in>
+              <in>mem.h</in>
+              <in>memp.h</in>
+              <in>mld6.h</in>
+              <in>nd6.h</in>
+              <in>netbuf.h</in>
+              <in>netdb.h</in>
+              <in>netif.h</in>
+              <in>netifapi.h</in>
+              <in>opt.h</in>
+              <in>pbuf.h</in>
+              <in>pppapi.h</in>
+              <in>raw.h</in>
+              <in>sio.h</in>
+              <in>snmp.h</in>
+              <in>sockets.h</in>
+              <in>stats.h</in>
+              <in>sys.h</in>
+              <in>tcp.h</in>
+              <in>tcpip.h</in>
+              <in>timers.h</in>
+              <in>udp.h</in>
+            </df>
+            <df name="netif">
+              <df name="ppp">
+                <df name="polarssl">
+                  <in>arc4.h</in>
+                  <in>des.h</in>
+                  <in>md4.h</in>
+                  <in>md5.h</in>
+                  <in>sha1.h</in>
+                </df>
+                <in>ccp.h</in>
+                <in>chap-md5.h</in>
+                <in>chap-new.h</in>
+                <in>chap_ms.h</in>
+                <in>eap.h</in>
+                <in>ecp.h</in>
+                <in>eui64.h</in>
+                <in>fsm.h</in>
+                <in>ipcp.h</in>
+                <in>ipv6cp.h</in>
+                <in>lcp.h</in>
+                <in>magic.h</in>
+                <in>mppe.h</in>
+                <in>ppp.h</in>
+                <in>ppp_impl.h</in>
+                <in>pppcrypt.h</in>
+                <in>pppdebug.h</in>
+                <in>pppoe.h</in>
+                <in>pppol2tp.h</in>
+                <in>pppos.h</in>
+                <in>upap.h</in>
+                <in>vj.h</in>
+              </df>
+              <in>etharp.h</in>
+              <in>ethernet.h</in>
+              <in>lowpan6.h</in>
+              <in>lowpan6_opts.h</in>
+              <in>slipif.h</in>
+            </df>
+            <df name="port">
+              <df name="arch">
+                <in>cc.h</in>
+                <in>perf.h</in>
+                <in>sys_arch.h</in>
+                <in>vfs_lwip.h</in>
+              </df>
+              <df name="arpa">
+                <in>inet.h</in>
+              </df>
+              <df name="netif">
+                <in>ethernetif.h</in>
+                <in>wlanif.h</in>
+              </df>
+              <df name="netinet">
+                <in>in.h</in>
+              </df>
+              <in>lwipopts.h</in>
+            </df>
+            <df name="posix">
+              <df name="sys">
+                <in>socket.h</in>
+              </df>
+              <in>netdb.h</in>
+            </df>
+          </df>
+        </df>
+        <df name="netif">
+          <df name="ppp">
+            <df name="polarssl">
+              <in>arc4.c</in>
+              <in>des.c</in>
+              <in>md4.c</in>
+              <in>md5.c</in>
+              <in>sha1.c</in>
+            </df>
+            <in>auth.c</in>
+            <in>ccp.c</in>
+            <in>chap-md5.c</in>
+            <in>chap-new.c</in>
+            <in>chap_ms.c</in>
+            <in>demand.c</in>
+            <in>eap.c</in>
+            <in>ecp.c</in>
+            <in>eui64.c</in>
+            <in>fsm.c</in>
+            <in>ipcp.c</in>
+            <in>ipv6cp.c</in>
+            <in>lcp.c</in>
+            <in>magic.c</in>
+            <in>mppe.c</in>
+            <in>multilink.c</in>
+            <in>ppp.c</in>
+            <in>pppcrypt.c</in>
+            <in>pppoe.c</in>
+            <in>pppol2tp.c</in>
+            <in>pppos.c</in>
+            <in>upap.c</in>
+            <in>utils.c</in>
+            <in>vj.c</in>
+          </df>
+          <in>etharp.c</in>
+          <in>ethernet.c</in>
+          <in>ethernetif.c</in>
+          <in>lowpan6.c</in>
+          <in>slipif.c</in>
+        </df>
+        <df name="port">
+          <df name="debug">
+            <in>lwip_debug.c</in>
+          </df>
+          <df name="freertos">
+            <in>sys_arch.c</in>
+          </df>
+          <df name="netif">
+            <in>ethernetif.c</in>
+            <in>wlanif.c</in>
+          </df>
+          <in>vfs_lwip.c</in>
+        </df>
+      </df>
+      <df name="mbedtls">
+        <df name="include">
+          <df name="mbedtls">
+            <in>aes.h</in>
+            <in>aesni.h</in>
+            <in>arc4.h</in>
+            <in>asn1.h</in>
+            <in>asn1write.h</in>
+            <in>base64.h</in>
+            <in>bignum.h</in>
+            <in>blowfish.h</in>
+            <in>bn_mul.h</in>
+            <in>camellia.h</in>
+            <in>ccm.h</in>
+            <in>certs.h</in>
+            <in>check_config.h</in>
+            <in>cipher.h</in>
+            <in>cipher_internal.h</in>
+            <in>cmac.h</in>
+            <in>compat-1.3.h</in>
+            <in>config.h</in>
+            <in>ctr_drbg.h</in>
+            <in>debug.h</in>
+            <in>des.h</in>
+            <in>dhm.h</in>
+            <in>ecdh.h</in>
+            <in>ecdsa.h</in>
+            <in>ecjpake.h</in>
+            <in>ecp.h</in>
+            <in>ecp_internal.h</in>
+            <in>entropy.h</in>
+            <in>entropy_poll.h</in>
+            <in>error.h</in>
+            <in>gcm.h</in>
+            <in>havege.h</in>
+            <in>hmac_drbg.h</in>
+            <in>md.h</in>
+            <in>md2.h</in>
+            <in>md4.h</in>
+            <in>md5.h</in>
+            <in>md_internal.h</in>
+            <in>memory_buffer_alloc.h</in>
+            <in>net.h</in>
+            <in>net_sockets.h</in>
+            <in>oid.h</in>
+            <in>padlock.h</in>
+            <in>pem.h</in>
+            <in>pk.h</in>
+            <in>pk_internal.h</in>
+            <in>pkcs11.h</in>
+            <in>pkcs12.h</in>
+            <in>pkcs5.h</in>
+            <in>platform.h</in>
+            <in>platform_time.h</in>
+            <in>ripemd160.h</in>
+            <in>rsa.h</in>
+            <in>sha1.h</in>
+            <in>sha256.h</in>
+            <in>sha512.h</in>
+            <in>ssl.h</in>
+            <in>ssl_cache.h</in>
+            <in>ssl_ciphersuites.h</in>
+            <in>ssl_cookie.h</in>
+            <in>ssl_internal.h</in>
+            <in>ssl_ticket.h</in>
+            <in>threading.h</in>
+            <in>timing.h</in>
+            <in>version.h</in>
+            <in>x509.h</in>
+            <in>x509_crl.h</in>
+            <in>x509_crt.h</in>
+            <in>x509_csr.h</in>
+            <in>xtea.h</in>
+          </df>
+        </df>
+        <df name="library">
+          <in>aes.c</in>
+          <in>aesni.c</in>
+          <in>arc4.c</in>
+          <in>asn1parse.c</in>
+          <in>asn1write.c</in>
+          <in>base64.c</in>
+          <in>bignum.c</in>
+          <in>blowfish.c</in>
+          <in>camellia.c</in>
+          <in>ccm.c</in>
+          <in>certs.c</in>
+          <in>cipher.c</in>
+          <in>cipher_wrap.c</in>
+          <in>cmac.c</in>
+          <in>ctr_drbg.c</in>
+          <in>debug.c</in>
+          <in>des.c</in>
+          <in>dhm.c</in>
+          <in>ecdh.c</in>
+          <in>ecdsa.c</in>
+          <in>ecjpake.c</in>
+          <in>ecp.c</in>
+          <in>ecp_curves.c</in>
+          <in>entropy.c</in>
+          <in>entropy_poll.c</in>
+          <in>error.c</in>
+          <in>gcm.c</in>
+          <in>havege.c</in>
+          <in>hmac_drbg.c</in>
+          <in>md.c</in>
+          <in>md2.c</in>
+          <in>md4.c</in>
+          <in>md5.c</in>
+          <in>md_wrap.c</in>
+          <in>memory_buffer_alloc.c</in>
+          <in>oid.c</in>
+          <in>padlock.c</in>
+          <in>pem.c</in>
+          <in>pk.c</in>
+          <in>pk_wrap.c</in>
+          <in>pkcs11.c</in>
+          <in>pkcs12.c</in>
+          <in>pkcs5.c</in>
+          <in>pkparse.c</in>
+          <in>pkwrite.c</in>
+          <in>platform.c</in>
+          <in>ripemd160.c</in>
+          <in>rsa.c</in>
+          <in>sha1.c</in>
+          <in>sha256.c</in>
+          <in>sha512.c</in>
+          <in>ssl_cache.c</in>
+          <in>ssl_ciphersuites.c</in>
+          <in>ssl_cli.c</in>
+          <in>ssl_cookie.c</in>
+          <in>ssl_srv.c</in>
+          <in>ssl_ticket.c</in>
+          <in>ssl_tls.c</in>
+          <in>threading.c</in>
+          <in>timing.c</in>
+          <in>version.c</in>
+          <in>version_features.c</in>
+          <in>x509.c</in>
+          <in>x509_create.c</in>
+          <in>x509_crl.c</in>
+          <in>x509_crt.c</in>
+          <in>x509_csr.c</in>
+          <in>x509write_crt.c</in>
+          <in>x509write_csr.c</in>
+          <in>xtea.c</in>
+        </df>
+        <df name="port">
+          <df name="include">
+            <df name="mbedtls">
+              <in>bignum.h</in>
+              <in>config.h</in>
+              <in>esp_config.h</in>
+              <in>esp_debug.h</in>
+            </df>
+            <in>aes_alt.h</in>
+            <in>sha1_alt.h</in>
+            <in>sha256_alt.h</in>
+            <in>sha512_alt.h</in>
+          </df>
+          <in>esp_bignum.c</in>
+          <in>esp_hardware.c</in>
+          <in>esp_sha1.c</in>
+          <in>esp_sha256.c</in>
+          <in>esp_sha512.c</in>
+          <in>mbedtls_debug.c</in>
+          <in>net_sockets.c</in>
+        </df>
+        <df name="test">
+          <in>test_apb_dport_access.c</in>
+          <in>test_apb_dport_access.h</in>
+          <in>test_mbedtls.c</in>
+          <in>test_mbedtls_mpi.c</in>
+          <in>test_mbedtls_sha.c</in>
+          <in>test_rsa.c</in>
+        </df>
+      </df>
+      <df name="mdns">
+        <df name="include">
+          <in>mdns.h</in>
+          <in>mdns_console.h</in>
+        </df>
+        <df name="private_include">
+          <in>mdns_private.h</in>
+        </df>
+        <df name="test_afl_fuzz_host">
+          <df name="in">
+          </df>
+          <in>esp32_compat.h</in>
+          <in>test.c</in>
+        </df>
+        <in>mdns.c</in>
+        <in>mdns_console.c</in>
+      </df>
+      <df name="micro-ecc">
+        <df name="micro-ecc">
+          <df name="scripts">
+          </df>
+          <df name="test">
+            <df name="ecc_test">
+            </df>
+            <in>test_compress.c</in>
+            <in>test_compute.c</in>
+            <in>test_ecdh.c</in>
+            <in>test_ecdsa.c</in>
+          </df>
+          <in>types.h</in>
+          <in>uECC.c</in>
+          <in>uECC.h</in>
+          <in>uECC_vli.h</in>
+        </df>
+      </df>
+      <df name="newlib">
+        <df name="include">
+          <df name="machine">
+            <in>_default_types.h</in>
+            <in>_types.h</in>
+            <in>ansi.h</in>
+            <in>endian.h</in>
+            <in>fastmath.h</in>
+            <in>ieeefp.h</in>
+            <in>malloc.h</in>
+            <in>param.h</in>
+            <in>setjmp-dj.h</in>
+            <in>setjmp.h</in>
+            <in>stdlib.h</in>
+            <in>termios.h</in>
+            <in>time.h</in>
+            <in>types.h</in>
+          </df>
+          <df name="sys">
+            <in>_default_fcntl.h</in>
+            <in>_intsup.h</in>
+            <in>_types.h</in>
+            <in>cdefs.h</in>
+            <in>config.h</in>
+            <in>custom_file.h</in>
+            <in>dir.h</in>
+            <in>errno.h</in>
+            <in>fcntl.h</in>
+            <in>features.h</in>
+            <in>file.h</in>
+            <in>iconvnls.h</in>
+            <in>lock.h</in>
+            <in>param.h</in>
+            <in>queue.h</in>
+            <in>reent.h</in>
+            <in>resource.h</in>
+            <in>sched.h</in>
+            <in>signal.h</in>
+            <in>stat.h</in>
+            <in>stdio.h</in>
+            <in>string.h</in>
+            <in>syslimits.h</in>
+            <in>time.h</in>
+            <in>timeb.h</in>
+            <in>times.h</in>
+            <in>types.h</in>
+            <in>unistd.h</in>
+            <in>utime.h</in>
+            <in>wait.h</in>
+          </df>
+          <df name="xtensa">
+            <df name="config">
+              <in>core-isa.h</in>
+            </df>
+          </df>
+          <in>_ansi.h</in>
+          <in>_syslist.h</in>
+          <in>alloca.h</in>
+          <in>ar.h</in>
+          <in>argz.h</in>
+          <in>assert.h</in>
+          <in>complex.h</in>
+          <in>config.h</in>
+          <in>ctype.h</in>
+          <in>dirent.h</in>
+          <in>envlock.h</in>
+          <in>envz.h</in>
+          <in>errno.h</in>
+          <in>fastmath.h</in>
+          <in>fcntl.h</in>
+          <in>fenv.h</in>
+          <in>fnmatch.h</in>
+          <in>getopt.h</in>
+          <in>glob.h</in>
+          <in>grp.h</in>
+          <in>iconv.h</in>
+          <in>ieeefp.h</in>
+          <in>inttypes.h</in>
+          <in>langinfo.h</in>
+          <in>libgen.h</in>
+          <in>limits.h</in>
+          <in>locale.h</in>
+          <in>malloc.h</in>
+          <in>math.h</in>
+          <in>newlib.h</in>
+          <in>paths.h</in>
+          <in>pthread.h</in>
+          <in>pwd.h</in>
+          <in>reent.h</in>
+          <in>regdef.h</in>
+          <in>regex.h</in>
+          <in>sched.h</in>
+          <in>search.h</in>
+          <in>setjmp.h</in>
+          <in>signal.h</in>
+          <in>spawn.h</in>
+          <in>stdatomic.h</in>
+          <in>stdint.h</in>
+          <in>stdio.h</in>
+          <in>stdio_ext.h</in>
+          <in>stdlib.h</in>
+          <in>string.h</in>
+          <in>strings.h</in>
+          <in>tar.h</in>
+          <in>termios.h</in>
+          <in>tgmath.h</in>
+          <in>time.h</in>
+          <in>unctrl.h</in>
+          <in>unistd.h</in>
+          <in>utime.h</in>
+          <in>utmp.h</in>
+          <in>wchar.h</in>
+          <in>wctype.h</in>
+          <in>wordexp.h</in>
+        </df>
+        <df name="lib">
+        </df>
+        <df name="platform_include">
+          <in>assert.h</in>
+          <in>esp_newlib.h</in>
+        </df>
+        <df name="test">
+          <in>test_newlib.c</in>
+          <in>test_time.c</in>
+        </df>
+        <in>locks.c</in>
+        <in>reent_init.c</in>
+        <in>syscall_table.c</in>
+        <in>syscalls.c</in>
+        <in>time.c</in>
+      </df>
+      <df name="nghttp">
+        <df name="nghttp2">
+          <df name="cmake">
+          </df>
+          <df name="contrib">
+          </df>
+          <df name="doc">
+            <df name="_exts">
+              <df name="sphinxcontrib">
+              </df>
+            </df>
+            <df name="_themes">
+              <df name="sphinx_rtd_theme">
+                <df name="static">
+                  <df name="css">
+                  </df>
+                  <df name="fonts">
+                  </df>
+                  <df name="js">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="bash_completion">
+            </df>
+            <df name="sources">
+            </df>
+          </df>
+          <df name="examples">
+            <in>asio-cl.cc</in>
+            <in>asio-cl2.cc</in>
+            <in>asio-sv.cc</in>
+            <in>asio-sv2.cc</in>
+            <in>client.c</in>
+            <in>deflate.c</in>
+            <in>libevent-client.c</in>
+            <in>libevent-server.c</in>
+          </df>
+          <df name="fedora">
+          </df>
+          <df name="fuzz">
+            <df name="corpus">
+              <df name="h2spec">
+              </df>
+              <df name="nghttp">
+              </df>
+            </df>
+            <in>fuzz_target.cc</in>
+          </df>
+          <df name="integration-tests">
+          </df>
+          <df name="lib">
+            <df name="includes">
+              <df name="nghttp2">
+                <in>nghttp2.h</in>
+              </df>
+            </df>
+            <in>nghttp2_buf.c</in>
+            <in>nghttp2_buf.h</in>
+            <in>nghttp2_callbacks.c</in>
+            <in>nghttp2_callbacks.h</in>
+            <in>nghttp2_debug.c</in>
+            <in>nghttp2_debug.h</in>
+            <in>nghttp2_frame.c</in>
+            <in>nghttp2_frame.h</in>
+            <in>nghttp2_hd.c</in>
+            <in>nghttp2_hd.h</in>
+            <in>nghttp2_hd_huffman.c</in>
+            <in>nghttp2_hd_huffman.h</in>
+            <in>nghttp2_hd_huffman_data.c</in>
+            <in>nghttp2_helper.c</in>
+            <in>nghttp2_helper.h</in>
+            <in>nghttp2_http.c</in>
+            <in>nghttp2_http.h</in>
+            <in>nghttp2_int.h</in>
+            <in>nghttp2_map.c</in>
+            <in>nghttp2_map.h</in>
+            <in>nghttp2_mem.c</in>
+            <in>nghttp2_mem.h</in>
+            <in>nghttp2_net.h</in>
+            <in>nghttp2_npn.c</in>
+            <in>nghttp2_npn.h</in>
+            <in>nghttp2_option.c</in>
+            <in>nghttp2_option.h</in>
+            <in>nghttp2_outbound_item.c</in>
+            <in>nghttp2_outbound_item.h</in>
+            <in>nghttp2_pq.c</in>
+            <in>nghttp2_pq.h</in>
+            <in>nghttp2_priority_spec.c</in>
+            <in>nghttp2_priority_spec.h</in>
+            <in>nghttp2_queue.c</in>
+            <in>nghttp2_queue.h</in>
+            <in>nghttp2_rcbuf.c</in>
+            <in>nghttp2_rcbuf.h</in>
+            <in>nghttp2_session.c</in>
+            <in>nghttp2_session.h</in>
+            <in>nghttp2_stream.c</in>
+            <in>nghttp2_stream.h</in>
+            <in>nghttp2_submit.c</in>
+            <in>nghttp2_submit.h</in>
+            <in>nghttp2_version.c</in>
+          </df>
+          <df name="m4">
+          </df>
+          <df name="python">
+          </df>
+          <df name="script">
+          </df>
+          <df name="src">
+            <df name="includes">
+              <df name="nghttp2">
+                <in>asio_http2.h</in>
+                <in>asio_http2_client.h</in>
+                <in>asio_http2_server.h</in>
+              </df>
+            </df>
+            <in>HtmlParser.cc</in>
+            <in>HtmlParser.h</in>
+            <in>HttpServer.cc</in>
+            <in>HttpServer.h</in>
+            <in>allocator.h</in>
+            <in>app_helper.cc</in>
+            <in>app_helper.h</in>
+            <in>asio_client_request.cc</in>
+            <in>asio_client_request_impl.cc</in>
+            <in>asio_client_request_impl.h</in>
+            <in>asio_client_response.cc</in>
+            <in>asio_client_response_impl.cc</in>
+            <in>asio_client_response_impl.h</in>
+            <in>asio_client_session.cc</in>
+            <in>asio_client_session_impl.cc</in>
+            <in>asio_client_session_impl.h</in>
+            <in>asio_client_session_tcp_impl.cc</in>
+            <in>asio_client_session_tcp_impl.h</in>
+            <in>asio_client_session_tls_impl.cc</in>
+            <in>asio_client_session_tls_impl.h</in>
+            <in>asio_client_stream.cc</in>
+            <in>asio_client_stream.h</in>
+            <in>asio_client_tls_context.cc</in>
+            <in>asio_client_tls_context.h</in>
+            <in>asio_common.cc</in>
+            <in>asio_common.h</in>
+            <in>asio_io_service_pool.cc</in>
+            <in>asio_io_service_pool.h</in>
+            <in>asio_server.cc</in>
+            <in>asio_server.h</in>
+            <in>asio_server_connection.h</in>
+            <in>asio_server_http2.cc</in>
+            <in>asio_server_http2_handler.cc</in>
+            <in>asio_server_http2_handler.h</in>
+            <in>asio_server_http2_impl.cc</in>
+            <in>asio_server_http2_impl.h</in>
+            <in>asio_server_request.cc</in>
+            <in>asio_server_request_handler.cc</in>
+            <in>asio_server_request_handler.h</in>
+            <in>asio_server_request_impl.cc</in>
+            <in>asio_server_request_impl.h</in>
+            <in>asio_server_response.cc</in>
+            <in>asio_server_response_impl.cc</in>
+            <in>asio_server_response_impl.h</in>
+            <in>asio_server_serve_mux.cc</in>
+            <in>asio_server_serve_mux.h</in>
+            <in>asio_server_stream.cc</in>
+            <in>asio_server_stream.h</in>
+            <in>asio_server_tls_context.cc</in>
+            <in>asio_server_tls_context.h</in>
+            <in>base64.h</in>
+            <in>base64_test.cc</in>
+            <in>base64_test.h</in>
+            <in>buffer.h</in>
+            <in>buffer_test.cc</in>
+            <in>buffer_test.h</in>
+            <in>comp_helper.c</in>
+            <in>comp_helper.h</in>
+            <in>deflatehd.cc</in>
+            <in>h2load.cc</in>
+            <in>h2load.h</in>
+            <in>h2load_http1_session.cc</in>
+            <in>h2load_http1_session.h</in>
+            <in>h2load_http2_session.cc</in>
+            <in>h2load_http2_session.h</in>
+            <in>h2load_session.h</in>
+            <in>h2load_spdy_session.cc</in>
+            <in>h2load_spdy_session.h</in>
+            <in>http2.cc</in>
+            <in>http2.h</in>
+            <in>http2_test.cc</in>
+            <in>http2_test.h</in>
+            <in>inflatehd.cc</in>
+            <in>libevent_util.cc</in>
+            <in>libevent_util.h</in>
+            <in>memchunk.h</in>
+            <in>memchunk_test.cc</in>
+            <in>memchunk_test.h</in>
+            <in>network.h</in>
+            <in>nghttp.cc</in>
+            <in>nghttp.h</in>
+            <in>nghttp2_config.h</in>
+            <in>nghttp2_gzip.c</in>
+            <in>nghttp2_gzip.h</in>
+            <in>nghttp2_gzip_test.c</in>
+            <in>nghttp2_gzip_test.h</in>
+            <in>nghttpd.cc</in>
+            <in>shrpx-unittest.cc</in>
+            <in>shrpx.cc</in>
+            <in>shrpx.h</in>
+            <in>shrpx_accept_handler.cc</in>
+            <in>shrpx_accept_handler.h</in>
+            <in>shrpx_api_downstream_connection.cc</in>
+            <in>shrpx_api_downstream_connection.h</in>
+            <in>shrpx_client_handler.cc</in>
+            <in>shrpx_client_handler.h</in>
+            <in>shrpx_config.cc</in>
+            <in>shrpx_config.h</in>
+            <in>shrpx_config_test.cc</in>
+            <in>shrpx_config_test.h</in>
+            <in>shrpx_connect_blocker.cc</in>
+            <in>shrpx_connect_blocker.h</in>
+            <in>shrpx_connection.cc</in>
+            <in>shrpx_connection.h</in>
+            <in>shrpx_connection_handler.cc</in>
+            <in>shrpx_connection_handler.h</in>
+            <in>shrpx_dns_resolver.cc</in>
+            <in>shrpx_dns_resolver.h</in>
+            <in>shrpx_dns_tracker.cc</in>
+            <in>shrpx_dns_tracker.h</in>
+            <in>shrpx_downstream.cc</in>
+            <in>shrpx_downstream.h</in>
+            <in>shrpx_downstream_connection.cc</in>
+            <in>shrpx_downstream_connection.h</in>
+            <in>shrpx_downstream_connection_pool.cc</in>
+            <in>shrpx_downstream_connection_pool.h</in>
+            <in>shrpx_downstream_queue.cc</in>
+            <in>shrpx_downstream_queue.h</in>
+            <in>shrpx_downstream_test.cc</in>
+            <in>shrpx_downstream_test.h</in>
+            <in>shrpx_dual_dns_resolver.cc</in>
+            <in>shrpx_dual_dns_resolver.h</in>
+            <in>shrpx_error.h</in>
+            <in>shrpx_exec.cc</in>
+            <in>shrpx_exec.h</in>
+            <in>shrpx_health_monitor_downstream_connection.cc</in>
+            <in>shrpx_health_monitor_downstream_connection.h</in>
+            <in>shrpx_http.cc</in>
+            <in>shrpx_http.h</in>
+            <in>shrpx_http2_downstream_connection.cc</in>
+            <in>shrpx_http2_downstream_connection.h</in>
+            <in>shrpx_http2_session.cc</in>
+            <in>shrpx_http2_session.h</in>
+            <in>shrpx_http2_upstream.cc</in>
+            <in>shrpx_http2_upstream.h</in>
+            <in>shrpx_http_downstream_connection.cc</in>
+            <in>shrpx_http_downstream_connection.h</in>
+            <in>shrpx_http_test.cc</in>
+            <in>shrpx_http_test.h</in>
+            <in>shrpx_https_upstream.cc</in>
+            <in>shrpx_https_upstream.h</in>
+            <in>shrpx_io_control.cc</in>
+            <in>shrpx_io_control.h</in>
+            <in>shrpx_live_check.cc</in>
+            <in>shrpx_live_check.h</in>
+            <in>shrpx_log.cc</in>
+            <in>shrpx_log.h</in>
+            <in>shrpx_log_config.cc</in>
+            <in>shrpx_log_config.h</in>
+            <in>shrpx_memcached_connection.cc</in>
+            <in>shrpx_memcached_connection.h</in>
+            <in>shrpx_memcached_dispatcher.cc</in>
+            <in>shrpx_memcached_dispatcher.h</in>
+            <in>shrpx_memcached_request.h</in>
+            <in>shrpx_memcached_result.h</in>
+            <in>shrpx_mruby.cc</in>
+            <in>shrpx_mruby.h</in>
+            <in>shrpx_mruby_module.cc</in>
+            <in>shrpx_mruby_module.h</in>
+            <in>shrpx_mruby_module_env.cc</in>
+            <in>shrpx_mruby_module_env.h</in>
+            <in>shrpx_mruby_module_request.cc</in>
+            <in>shrpx_mruby_module_request.h</in>
+            <in>shrpx_mruby_module_response.cc</in>
+            <in>shrpx_mruby_module_response.h</in>
+            <in>shrpx_process.h</in>
+            <in>shrpx_rate_limit.cc</in>
+            <in>shrpx_rate_limit.h</in>
+            <in>shrpx_router.cc</in>
+            <in>shrpx_router.h</in>
+            <in>shrpx_router_test.cc</in>
+            <in>shrpx_router_test.h</in>
+            <in>shrpx_signal.cc</in>
+            <in>shrpx_signal.h</in>
+            <in>shrpx_spdy_upstream.cc</in>
+            <in>shrpx_spdy_upstream.h</in>
+            <in>shrpx_tls.cc</in>
+            <in>shrpx_tls.h</in>
+            <in>shrpx_tls_test.cc</in>
+            <in>shrpx_tls_test.h</in>
+            <in>shrpx_upstream.h</in>
+            <in>shrpx_worker.cc</in>
+            <in>shrpx_worker.h</in>
+            <in>shrpx_worker_process.cc</in>
+            <in>shrpx_worker_process.h</in>
+            <in>shrpx_worker_test.cc</in>
+            <in>shrpx_worker_test.h</in>
+            <in>ssl_compat.h</in>
+            <in>template.h</in>
+            <in>template_test.cc</in>
+            <in>template_test.h</in>
+            <in>timegm.c</in>
+            <in>timegm.h</in>
+            <in>tls.cc</in>
+            <in>tls.h</in>
+            <in>util.cc</in>
+            <in>util.h</in>
+            <in>util_test.cc</in>
+            <in>util_test.h</in>
+            <in>xsi_strerror.c</in>
+            <in>xsi_strerror.h</in>
+          </df>
+          <df name="tests">
+            <df name="testdata">
+            </df>
+            <in>failmalloc.c</in>
+            <in>failmalloc_test.c</in>
+            <in>failmalloc_test.h</in>
+            <in>main.c</in>
+            <in>malloc_wrapper.c</in>
+            <in>malloc_wrapper.h</in>
+            <in>nghttp2_buf_test.c</in>
+            <in>nghttp2_buf_test.h</in>
+            <in>nghttp2_frame_test.c</in>
+            <in>nghttp2_frame_test.h</in>
+            <in>nghttp2_hd_test.c</in>
+            <in>nghttp2_hd_test.h</in>
+            <in>nghttp2_helper_test.c</in>
+            <in>nghttp2_helper_test.h</in>
+            <in>nghttp2_map_test.c</in>
+            <in>nghttp2_map_test.h</in>
+            <in>nghttp2_npn_test.c</in>
+            <in>nghttp2_npn_test.h</in>
+            <in>nghttp2_pq_test.c</in>
+            <in>nghttp2_pq_test.h</in>
+            <in>nghttp2_queue_test.c</in>
+            <in>nghttp2_queue_test.h</in>
+            <in>nghttp2_session_test.c</in>
+            <in>nghttp2_session_test.h</in>
+            <in>nghttp2_stream_test.c</in>
+            <in>nghttp2_stream_test.h</in>
+            <in>nghttp2_test_helper.c</in>
+            <in>nghttp2_test_helper.h</in>
+          </df>
+          <df name="third-party">
+            <df name="http-parser">
+              <df name="contrib">
+                <in>parsertrace.c</in>
+                <in>url_parser.c</in>
+              </df>
+              <in>bench.c</in>
+              <in>http_parser.c</in>
+              <in>http_parser.h</in>
+              <in>test.c</in>
+            </df>
+            <df name="mruby">
+              <df name="benchmark">
+              </df>
+              <df name="bin">
+              </df>
+              <df name="doc">
+                <df name="guides">
+                </df>
+              </df>
+              <df name="examples">
+                <df name="mrbgems">
+                  <df name="c_and_ruby_extension_example">
+                    <df name="mrblib">
+                    </df>
+                    <df name="src">
+                      <in>example.c</in>
+                    </df>
+                    <df name="test">
+                    </df>
+                  </df>
+                  <df name="c_extension_example">
+                    <df name="src">
+                      <in>example.c</in>
+                    </df>
+                    <df name="test">
+                      <in>example.c</in>
+                    </df>
+                  </df>
+                  <df name="ruby_extension_example">
+                    <df name="mrblib">
+                    </df>
+                    <df name="test">
+                    </df>
+                  </df>
+                </df>
+                <df name="targets">
+                </df>
+              </df>
+              <df name="include">
+                <df name="mruby">
+                  <in>array.h</in>
+                  <in>boxing_nan.h</in>
+                  <in>boxing_no.h</in>
+                  <in>boxing_word.h</in>
+                  <in>class.h</in>
+                  <in>common.h</in>
+                  <in>compile.h</in>
+                  <in>data.h</in>
+                  <in>debug.h</in>
+                  <in>dump.h</in>
+                  <in>error.h</in>
+                  <in>gc.h</in>
+                  <in>hash.h</in>
+                  <in>irep.h</in>
+                  <in>khash.h</in>
+                  <in>numeric.h</in>
+                  <in>object.h</in>
+                  <in>opcode.h</in>
+                  <in>proc.h</in>
+                  <in>range.h</in>
+                  <in>re.h</in>
+                  <in>string.h</in>
+                  <in>throw.h</in>
+                  <in>value.h</in>
+                  <in>variable.h</in>
+                  <in>version.h</in>
+                </df>
+                <in>mrbconf.h</in>
+                <in>mruby.h</in>
+              </df>
+              <df name="lib">
+                <df name="mruby">
+                </df>
+              </df>
+              <df name="mrbgems">
+                <df name="mruby-array-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>array.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-bin-debugger">
+                  <df name="bintest">
+                  </df>
+                  <df name="tools">
+                    <df name="mrdb">
+                      <in>apibreak.c</in>
+                      <in>apibreak.h</in>
+                      <in>apilist.c</in>
+                      <in>apilist.h</in>
+                      <in>apiprint.c</in>
+                      <in>apiprint.h</in>
+                      <in>cmdbreak.c</in>
+                      <in>cmdmisc.c</in>
+                      <in>cmdprint.c</in>
+                      <in>cmdrun.c</in>
+                      <in>mrdb.c</in>
+                      <in>mrdb.h</in>
+                      <in>mrdbconf.h</in>
+                      <in>mrdberror.h</in>
+                    </df>
+                  </df>
+                </df>
+                <df name="mruby-bin-mirb">
+                  <df name="bintest">
+                  </df>
+                  <df name="tools">
+                    <df name="mirb">
+                      <in>mirb.c</in>
+                    </df>
+                  </df>
+                </df>
+                <df name="mruby-bin-mrbc">
+                  <df name="tools">
+                    <df name="mrbc">
+                      <in>mrbc.c</in>
+                    </df>
+                  </df>
+                </df>
+                <df name="mruby-bin-mruby">
+                  <df name="bintest">
+                  </df>
+                  <df name="tools">
+                    <df name="mruby">
+                      <in>mruby.c</in>
+                    </df>
+                  </df>
+                </df>
+                <df name="mruby-bin-mruby-config">
+                </df>
+                <df name="mruby-bin-strip">
+                  <df name="bintest">
+                  </df>
+                  <df name="tools">
+                    <df name="mruby-strip">
+                      <in>mruby-strip.c</in>
+                    </df>
+                  </df>
+                </df>
+                <df name="mruby-compiler">
+                  <df name="bintest">
+                  </df>
+                  <df name="core">
+                    <in>codegen.c</in>
+                    <in>node.h</in>
+                  </df>
+                </df>
+                <df name="mruby-enum-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-enum-lazy">
+                  <df name="mrblib">
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-enumerator">
+                  <df name="mrblib">
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-error">
+                  <df name="src">
+                    <in>exception.c</in>
+                  </df>
+                  <df name="test">
+                    <in>exception.c</in>
+                  </df>
+                </df>
+                <df name="mruby-eval">
+                  <df name="src">
+                    <in>eval.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-exit">
+                  <df name="src">
+                    <in>mruby-exit.c</in>
+                  </df>
+                </df>
+                <df name="mruby-fiber">
+                  <df name="src">
+                    <in>fiber.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-hash-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>hash-ext.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-kernel-ext">
+                  <df name="src">
+                    <in>kernel.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-math">
+                  <df name="src">
+                    <in>math.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-numeric-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>numeric_ext.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-object-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>object.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-objectspace">
+                  <df name="src">
+                    <in>mruby_objectspace.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-print">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>print.c</in>
+                  </df>
+                </df>
+                <df name="mruby-proc-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>proc.c</in>
+                  </df>
+                  <df name="test">
+                    <in>proc.c</in>
+                  </df>
+                </df>
+                <df name="mruby-random">
+                  <df name="src">
+                    <in>mt19937ar.c</in>
+                    <in>mt19937ar.h</in>
+                    <in>random.c</in>
+                    <in>random.h</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-range-ext">
+                  <df name="src">
+                    <in>range.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-sprintf">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>kernel.c</in>
+                    <in>sprintf.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-string-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>string.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-struct">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>struct.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-symbol-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>symbol.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-test">
+                  <in>driver.c</in>
+                  <in>init_mrbtest.c</in>
+                </df>
+                <df name="mruby-time">
+                  <df name="mrblib">
+                  </df>
+                  <df name="src">
+                    <in>time.c</in>
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+                <df name="mruby-toplevel-ext">
+                  <df name="mrblib">
+                  </df>
+                  <df name="test">
+                  </df>
+                </df>
+              </df>
+              <df name="mrblib">
+                <in>init_mrblib.c</in>
+              </df>
+              <df name="src">
+                <df name="ext">
+                </df>
+                <in>array.c</in>
+                <in>backtrace.c</in>
+                <in>class.c</in>
+                <in>codedump.c</in>
+                <in>compar.c</in>
+                <in>crc.c</in>
+                <in>debug.c</in>
+                <in>dump.c</in>
+                <in>enum.c</in>
+                <in>error.c</in>
+                <in>error.h</in>
+                <in>etc.c</in>
+                <in>fmt_fp.c</in>
+                <in>gc.c</in>
+                <in>hash.c</in>
+                <in>init.c</in>
+                <in>kernel.c</in>
+                <in>load.c</in>
+                <in>numeric.c</in>
+                <in>object.c</in>
+                <in>opcode.h</in>
+                <in>pool.c</in>
+                <in>print.c</in>
+                <in>proc.c</in>
+                <in>range.c</in>
+                <in>state.c</in>
+                <in>string.c</in>
+                <in>symbol.c</in>
+                <in>value_array.h</in>
+                <in>variable.c</in>
+                <in>version.c</in>
+                <in>vm.c</in>
+              </df>
+              <df name="tasks">
+                <df name="toolchains">
+                </df>
+              </df>
+              <df name="test">
+                <df name="t">
+                </df>
+              </df>
+            </df>
+            <df name="neverbleed">
+              <in>neverbleed.c</in>
+              <in>neverbleed.h</in>
+              <in>test.c</in>
+            </df>
+          </df>
+        </df>
+        <df name="port">
+          <df name="include">
+            <df name="nghttp2">
+              <in>nghttp2ver.h</in>
+            </df>
+            <in>config.h</in>
+            <in>http_parser.h</in>
+          </df>
+          <in>http_parser.c</in>
+        </df>
+      </df>
+      <df name="nvs_flash">
+        <df name="include">
+          <in>nvs.h</in>
+          <in>nvs_flash.h</in>
+        </df>
+        <df name="src">
+          <in>compressed_enum_table.hpp</in>
+          <in>intrusive_list.h</in>
+          <in>nvs.hpp</in>
+          <in>nvs_api.cpp</in>
+          <in>nvs_item_hash_list.cpp</in>
+          <in>nvs_item_hash_list.hpp</in>
+          <in>nvs_page.cpp</in>
+          <in>nvs_page.hpp</in>
+          <in>nvs_pagemanager.cpp</in>
+          <in>nvs_pagemanager.hpp</in>
+          <in>nvs_platform.hpp</in>
+          <in>nvs_storage.cpp</in>
+          <in>nvs_storage.hpp</in>
+          <in>nvs_test_api.h</in>
+          <in>nvs_types.cpp</in>
+          <in>nvs_types.hpp</in>
+        </df>
+        <df name="test">
+          <in>test_nvs.c</in>
+        </df>
+        <df name="test_nvs_host">
+          <in>crc.cpp</in>
+          <in>crc.h</in>
+          <in>esp_error_check_stub.cpp</in>
+          <in>main.cpp</in>
+          <in>sdkconfig.h</in>
+          <in>spi_flash_emulation.cpp</in>
+          <in>spi_flash_emulation.h</in>
+          <in>test_compressed_enum_table.cpp</in>
+          <in>test_intrusive_list.cpp</in>
+          <in>test_nvs.cpp</in>
+          <in>test_spi_flash_emulation.cpp</in>
+        </df>
+      </df>
+      <df name="openssl">
+        <df name="include">
+          <df name="internal">
+            <in>ssl3.h</in>
+            <in>ssl_cert.h</in>
+            <in>ssl_code.h</in>
+            <in>ssl_dbg.h</in>
+            <in>ssl_lib.h</in>
+            <in>ssl_methods.h</in>
+            <in>ssl_pkey.h</in>
+            <in>ssl_stack.h</in>
+            <in>ssl_types.h</in>
+            <in>ssl_x509.h</in>
+            <in>tls1.h</in>
+            <in>x509_vfy.h</in>
+          </df>
+          <df name="openssl">
+            <in>ssl.h</in>
+          </df>
+          <df name="platform">
+            <in>ssl_opt.h</in>
+            <in>ssl_pm.h</in>
+            <in>ssl_port.h</in>
+          </df>
+        </df>
+        <df name="library">
+          <in>ssl_cert.c</in>
+          <in>ssl_lib.c</in>
+          <in>ssl_methods.c</in>
+          <in>ssl_pkey.c</in>
+          <in>ssl_stack.c</in>
+          <in>ssl_x509.c</in>
+        </df>
+        <df name="platform">
+          <in>ssl_pm.c</in>
+          <in>ssl_port.c</in>
+        </df>
+      </df>
+      <df name="partition_table">
+        <df name="test">
+          <in>test_partition.c</in>
+        </df>
+        <df name="test_gen_esp32part_host">
+        </df>
+      </df>
+      <df name="pthread">
+        <df name="test">
+          <in>test_cxx_cond_var.cpp</in>
+          <in>test_cxx_std_future.cpp</in>
+          <in>test_pthread_cxx.cpp</in>
+          <in>test_pthread_local_storage.c</in>
+        </df>
+        <in>pthread.c</in>
+        <in>pthread_cond_var.c</in>
+        <in>pthread_internal.h</in>
+        <in>pthread_local_storage.c</in>
+      </df>
+      <df name="sdmmc">
+        <df name="include">
+          <in>sdmmc_cmd.h</in>
+        </df>
+        <df name="test">
+          <in>test_sd.c</in>
+        </df>
+        <in>sdmmc_cmd.c</in>
+      </df>
+      <df name="soc">
+        <df name="esp32">
+          <df name="include">
+            <df name="soc">
+              <in>adc_channel.h</in>
+              <in>apb_ctrl_reg.h</in>
+              <in>apb_ctrl_struct.h</in>
+              <in>bb_reg.h</in>
+              <in>boot_mode.h</in>
+              <in>clkout_channel.h</in>
+              <in>cpu.h</in>
+              <in>dac_channel.h</in>
+              <in>dport_access.h</in>
+              <in>dport_reg.h</in>
+              <in>efuse_reg.h</in>
+              <in>emac_ex_reg.h</in>
+              <in>emac_reg_v2.h</in>
+              <in>fe_reg.h</in>
+              <in>frc_timer_reg.h</in>
+              <in>gpio_reg.h</in>
+              <in>gpio_sd_reg.h</in>
+              <in>gpio_sd_struct.h</in>
+              <in>gpio_sig_map.h</in>
+              <in>gpio_struct.h</in>
+              <in>hwcrypto_reg.h</in>
+              <in>i2c_reg.h</in>
+              <in>i2c_struct.h</in>
+              <in>i2s_reg.h</in>
+              <in>i2s_struct.h</in>
+              <in>io_mux_reg.h</in>
+              <in>ledc_reg.h</in>
+              <in>ledc_struct.h</in>
+              <in>mcpwm_reg.h</in>
+              <in>mcpwm_struct.h</in>
+              <in>nrx_reg.h</in>
+              <in>pcnt_reg.h</in>
+              <in>pcnt_struct.h</in>
+              <in>pid.h</in>
+              <in>rmt_reg.h</in>
+              <in>rmt_struct.h</in>
+              <in>rtc.h</in>
+              <in>rtc_cntl_reg.h</in>
+              <in>rtc_cntl_struct.h</in>
+              <in>rtc_gpio_channel.h</in>
+              <in>rtc_i2c_reg.h</in>
+              <in>rtc_io_reg.h</in>
+              <in>rtc_io_struct.h</in>
+              <in>sdmmc_reg.h</in>
+              <in>sdmmc_struct.h</in>
+              <in>sens_reg.h</in>
+              <in>sens_struct.h</in>
+              <in>soc.h</in>
+              <in>soc_ulp.h</in>
+              <in>spi_reg.h</in>
+              <in>spi_struct.h</in>
+              <in>syscon_reg.h</in>
+              <in>syscon_struct.h</in>
+              <in>timer_group_reg.h</in>
+              <in>timer_group_struct.h</in>
+              <in>touch_channel.h</in>
+              <in>uart_channel.h</in>
+              <in>uart_reg.h</in>
+              <in>uart_struct.h</in>
+              <in>uhci_reg.h</in>
+              <in>uhci_struct.h</in>
+              <in>wdev_reg.h</in>
+            </df>
+          </df>
+          <df name="test">
+            <in>test_rtc_clk.c</in>
+          </df>
+          <in>cpu_util.c</in>
+          <in>i2c_apll.h</in>
+          <in>i2c_bbpll.h</in>
+          <in>i2c_rtc_clk.h</in>
+          <in>rtc_clk.c</in>
+          <in>rtc_init.c</in>
+          <in>rtc_pm.c</in>
+          <in>rtc_sleep.c</in>
+          <in>rtc_time.c</in>
+          <in>soc_log.h</in>
+          <in>soc_memory_layout.c</in>
+        </df>
+        <df name="include">
+          <df name="soc">
+            <in>soc_memory_layout.h</in>
+          </df>
+        </df>
+        <df name="test">
+        </df>
+      </df>
+      <df name="spi_flash">
+        <df name="include">
+          <in>esp_partition.h</in>
+          <in>esp_spi_flash.h</in>
+        </df>
+        <df name="test">
+          <in>test_cache_disabled.c</in>
+          <in>test_flash_encryption.c</in>
+          <in>test_large_flash_writes.c</in>
+          <in>test_mmap.c</in>
+          <in>test_out_of_bounds_write.c</in>
+          <in>test_partitions.c</in>
+          <in>test_read_write.c</in>
+          <in>test_spi_flash.c</in>
+        </df>
+        <in>cache_utils.c</in>
+        <in>cache_utils.h</in>
+        <in>flash_mmap.c</in>
+        <in>flash_ops.c</in>
+        <in>partition.c</in>
+        <in>spi_flash_rom_patch.c</in>
+      </df>
+      <df name="spiffs">
+        <df name="include">
+          <in>esp_spiffs.h</in>
+          <in>spiffs_config.h</in>
+        </df>
+        <df name="spiffs">
+          <df name="afltests">
+          </df>
+          <df name="docs">
+          </df>
+          <df name="src">
+            <df name="default">
+              <in>spiffs_config.h</in>
+            </df>
+            <df name="test">
+              <in>main.c</in>
+              <in>params_test.h</in>
+              <in>test_bugreports.c</in>
+              <in>test_check.c</in>
+              <in>test_dev.c</in>
+              <in>test_hydrogen.c</in>
+              <in>test_spiffs.c</in>
+              <in>test_spiffs.h</in>
+              <in>testrunner.c</in>
+              <in>testrunner.h</in>
+              <in>testsuites.c</in>
+            </df>
+            <in>spiffs.h</in>
+            <in>spiffs_cache.c</in>
+            <in>spiffs_check.c</in>
+            <in>spiffs_gc.c</in>
+            <in>spiffs_hydrogen.c</in>
+            <in>spiffs_nucleus.c</in>
+            <in>spiffs_nucleus.h</in>
+          </df>
+        </df>
+        <df name="test">
+          <in>test_spiffs.c</in>
+        </df>
+        <in>esp_spiffs.c</in>
+      </df>
+      <df name="tcpip_adapter">
+        <df name="include">
+          <in>tcpip_adapter.h</in>
+        </df>
+        <in>tcpip_adapter_lwip.c</in>
+      </df>
+      <df name="ulp">
+        <df name="include">
+          <df name="esp32">
+            <in>ulp.h</in>
+          </df>
+        </df>
+        <df name="ld">
+        </df>
+        <df name="test">
+          <in>test_ulp.c</in>
+        </df>
+        <in>ulp.c</in>
+        <in>ulp_macro.c</in>
+      </df>
+      <df name="vfs">
+        <df name="include">
+          <df name="sys">
+            <in>dirent.h</in>
+            <in>ioctl.h</in>
+          </df>
+          <in>esp_vfs.h</in>
+          <in>esp_vfs_dev.h</in>
+        </df>
+        <df name="test">
+          <in>test_vfs_paths.c</in>
+          <in>test_vfs_uart.c</in>
+        </df>
+        <in>vfs.c</in>
+        <in>vfs_uart.c</in>
+      </df>
+      <df name="wear_levelling">
+        <df name="doc">
+        </df>
+        <df name="include">
+          <in>wear_levelling.h</in>
+        </df>
+        <df name="private_include">
+          <in>Flash_Access.h</in>
+          <in>Partition.h</in>
+          <in>SPI_Flash.h</in>
+          <in>WL_Config.h</in>
+          <in>WL_Ext_Cfg.h</in>
+          <in>WL_Ext_Perf.h</in>
+          <in>WL_Ext_Safe.h</in>
+          <in>WL_Flash.h</in>
+          <in>WL_State.h</in>
+        </df>
+        <df name="test">
+          <in>test_wl.c</in>
+        </df>
+        <df name="test_wl_host">
+          <in>Flash_Emulator.cpp</in>
+          <in>Flash_Emulator.h</in>
+          <in>TestPowerDown.cpp</in>
+          <in>esp_error_check_stub.cpp</in>
+          <in>esp_log_stub.cpp</in>
+          <in>main.cpp</in>
+          <in>sdkconfig.h</in>
+          <in>wl_tests_host.cpp</in>
+        </df>
+        <in>Partition.cpp</in>
+        <in>SPI_Flash.cpp</in>
+        <in>WL_Ext_Perf.cpp</in>
+        <in>WL_Ext_Safe.cpp</in>
+        <in>WL_Flash.cpp</in>
+        <in>crc32.cpp</in>
+        <in>crc32.h</in>
+        <in>wear_levelling.cpp</in>
+      </df>
+      <df name="wpa_supplicant">
+        <df name="include">
+          <df name="crypto">
+            <in>aes.h</in>
+            <in>aes_i.h</in>
+            <in>aes_wrap.h</in>
+            <in>base64.h</in>
+            <in>common.h</in>
+            <in>crypto.h</in>
+            <in>dh_group5.h</in>
+            <in>dh_groups.h</in>
+            <in>includes.h</in>
+            <in>md5.h</in>
+            <in>md5_i.h</in>
+            <in>ms_funcs.h</in>
+            <in>random.h</in>
+            <in>sha1.h</in>
+            <in>sha1_i.h</in>
+            <in>sha256.h</in>
+          </df>
+          <df name="wpa">
+            <in>ap_config.h</in>
+            <in>common.h</in>
+            <in>defs.h</in>
+            <in>eapol_common.h</in>
+            <in>hostapd.h</in>
+            <in>ieee80211_crypto.h</in>
+            <in>ieee802_11_defs.h</in>
+            <in>ieee802_1x.h</in>
+            <in>includes.h</in>
+            <in>list.h</in>
+            <in>sta_info.h</in>
+            <in>state_machine.h</in>
+            <in>wpa.h</in>
+            <in>wpa_auth.h</in>
+            <in>wpa_auth_i.h</in>
+            <in>wpa_auth_ie.h</in>
+            <in>wpa_common.h</in>
+            <in>wpa_debug.h</in>
+            <in>wpa_i.h</in>
+            <in>wpa_ie.h</in>
+            <in>wpabuf.h</in>
+            <in>wpas_glue.h</in>
+          </df>
+          <df name="wpa2">
+            <df name="eap_peer">
+              <in>eap.h</in>
+              <in>eap_common.h</in>
+              <in>eap_config.h</in>
+              <in>eap_defs.h</in>
+              <in>eap_i.h</in>
+              <in>eap_tls.h</in>
+              <in>eap_tls_common.h</in>
+            </df>
+            <df name="tls">
+              <in>asn1.h</in>
+              <in>bignum.h</in>
+              <in>libtommath.h</in>
+              <in>pkcs1.h</in>
+              <in>pkcs5.h</in>
+              <in>pkcs8.h</in>
+              <in>rsa.h</in>
+              <in>tls.h</in>
+              <in>tlsv1_client.h</in>
+              <in>tlsv1_client_i.h</in>
+              <in>tlsv1_common.h</in>
+              <in>tlsv1_cred.h</in>
+              <in>tlsv1_record.h</in>
+              <in>tlsv1_server.h</in>
+              <in>tlsv1_server_i.h</in>
+              <in>x509v3.h</in>
+            </df>
+            <df name="utils">
+              <in>base64.h</in>
+              <in>ext_password.h</in>
+              <in>ext_password_i.h</in>
+            </df>
+          </df>
+        </df>
+        <df name="port">
+          <df name="include">
+            <in>byteswap.h</in>
+            <in>endian.h</in>
+            <in>os.h</in>
+          </df>
+          <in>os_xtensa.c</in>
+        </df>
+        <df name="src">
+          <df name="crypto">
+            <in>aes-cbc.c</in>
+            <in>aes-internal-dec.c</in>
+            <in>aes-internal-enc.c</in>
+            <in>aes-internal.c</in>
+            <in>aes-unwrap.c</in>
+            <in>aes-wrap.c</in>
+            <in>bignum.c</in>
+            <in>bignum.h</in>
+            <in>crypto_internal-cipher.c</in>
+            <in>crypto_internal-modexp.c</in>
+            <in>crypto_internal-rsa.c</in>
+            <in>crypto_internal.c</in>
+            <in>des-internal.c</in>
+            <in>dh_group5.c</in>
+            <in>dh_groups.c</in>
+            <in>libtommath.h</in>
+            <in>md4-internal.c</in>
+            <in>md5-internal.c</in>
+            <in>md5.c</in>
+            <in>ms_funcs.c</in>
+            <in>rc4.c</in>
+            <in>sha1-internal.c</in>
+            <in>sha1-pbkdf2.c</in>
+            <in>sha1.c</in>
+            <in>sha256-internal.c</in>
+            <in>sha256.c</in>
+          </df>
+          <df name="fast_crypto">
+            <in>fast_aes-cbc.c</in>
+            <in>fast_aes-unwrap.c</in>
+            <in>fast_aes-wrap.c</in>
+            <in>fast_crypto_internal-cipher.c</in>
+            <in>fast_crypto_internal-modexp.c</in>
+            <in>fast_crypto_internal.c</in>
+            <in>fast_sha256-internal.c</in>
+            <in>fast_sha256.c</in>
+          </df>
+        </df>
+      </df>
+      <df name="xtensa-debug-module">
+        <df name="include">
+          <in>eri.h</in>
+          <in>trax.h</in>
+          <in>xtensa-debug-module.h</in>
+        </df>
+        <in>eri.c</in>
+        <in>trax.c</in>
+      </df>
+    </df>
+    <df root="." name="0">
+      <df name="build">
+        <df name="app_trace">
+          <df name="gcov">
+          </df>
+        </df>
+        <df name="app_update">
+        </df>
+        <df name="aws_iot">
+        </df>
+        <df name="bootloader">
+          <df name="bootloader_support">
+            <df name="src">
+            </df>
+          </df>
+          <df name="esptool_py">
+          </df>
+          <df name="log">
+          </df>
+          <df name="main">
+          </df>
+          <df name="micro-ecc">
+            <df name="micro-ecc">
+            </df>
+          </df>
+          <df name="soc">
+            <df name="esp32">
+            </df>
+          </df>
+          <df name="spi_flash">
+          </df>
+        </df>
+        <df name="bootloader_support">
+          <df name="src">
+          </df>
+        </df>
+        <df name="bt">
+        </df>
+        <df name="coap">
+          <df name="libcoap">
+            <df name="src">
+            </df>
+          </df>
+          <df name="port">
+          </df>
+        </df>
+        <df name="console">
+          <df name="argtable3">
+          </df>
+          <df name="linenoise">
+          </df>
+        </df>
+        <df name="cxx">
+        </df>
+        <df name="driver">
+        </df>
+        <df name="esp32">
+          <df name="hwcrypto">
+          </df>
+        </df>
+        <df name="esp_adc_cal">
+        </df>
+        <df name="esptool_py">
+        </df>
+        <df name="ethernet">
+          <df name="eth_phy">
+          </df>
+        </df>
+        <df name="expat">
+          <df name="library">
+          </df>
+          <df name="port">
+          </df>
+        </df>
+        <df name="fatfs">
+          <df name="src">
+            <df name="option">
+            </df>
+          </df>
+        </df>
+        <df name="freertos">
+        </df>
+        <df name="heap">
+        </df>
+        <df name="idf_test">
+        </df>
+        <df name="include">
+          <df name="config">
+            <df name="app">
+              <in>offset.h</in>
+            </df>
+            <df name="bootloader">
+              <df name="vddsdio">
+                <in>boost.h</in>
+              </df>
+            </df>
+            <df name="brownout">
+              <df name="det">
+                <df name="lvl">
+                  <df name="sel">
+                    <in>0.h</in>
+                  </df>
+                </df>
+                <in>lvl.h</in>
+              </df>
+              <in>det.h</in>
+            </df>
+            <df name="bt">
+              <df name="reserve">
+                <in>dram.h</in>
+              </df>
+            </df>
+            <df name="btdm">
+              <df name="controller">
+                <df name="pinned">
+                  <df name="to">
+                    <in>core.h</in>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="console">
+              <df name="uart">
+                <in>baudrate.h</in>
+                <in>default.h</in>
+                <in>num.h</in>
+              </df>
+            </df>
+            <df name="dma">
+              <df name="rx">
+                <df name="buf">
+                  <in>num.h</in>
+                </df>
+              </df>
+              <df name="tx">
+                <df name="buf">
+                  <in>num.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="emac">
+              <df name="task">
+                <in>priority.h</in>
+              </df>
+            </df>
+            <df name="esp32">
+              <df name="apptrace">
+                <df name="dest">
+                  <in>none.h</in>
+                </df>
+                <df name="lock">
+                  <in>enable.h</in>
+                </df>
+              </df>
+              <df name="debug">
+                <in>ocdaware.h</in>
+              </df>
+              <df name="deep">
+                <df name="sleep">
+                  <df name="wakeup">
+                    <in>delay.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="default">
+                <df name="cpu">
+                  <df name="freq">
+                    <in>160.h</in>
+                    <in>mhz.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="enable">
+                <df name="coredump">
+                  <df name="to">
+                    <in>none.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="panic">
+                <df name="print">
+                  <in>reboot.h</in>
+                </df>
+              </df>
+              <df name="phy">
+                <df name="calibration">
+                  <df name="and">
+                    <df name="data">
+                      <in>storage.h</in>
+                    </df>
+                  </df>
+                </df>
+                <df name="max">
+                  <df name="tx">
+                    <in>power.h</in>
+                  </df>
+                  <df name="wifi">
+                    <df name="tx">
+                      <in>power.h</in>
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="pthread">
+                <df name="task">
+                  <df name="prio">
+                    <in>default.h</in>
+                  </df>
+                  <df name="stack">
+                    <df name="size">
+                      <in>default.h</in>
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="rtc">
+                <df name="clk">
+                  <df name="cal">
+                    <in>cycles.h</in>
+                  </df>
+                </df>
+                <df name="clock">
+                  <df name="source">
+                    <df name="internal">
+                      <in>rc.h</in>
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="time">
+                <df name="syscall">
+                  <df name="use">
+                    <df name="rtc">
+                      <in>frc1.h</in>
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="wifi">
+                <df name="ampdu">
+                  <df name="rx">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="tx">
+                    <in>enabled.h</in>
+                  </df>
+                </df>
+                <df name="dynamic">
+                  <df name="rx">
+                    <df name="buffer">
+                      <in>num.h</in>
+                    </df>
+                  </df>
+                  <df name="tx">
+                    <df name="buffer">
+                      <in>num.h</in>
+                    </df>
+                    <in>buffer.h</in>
+                  </df>
+                </df>
+                <df name="nvs">
+                  <in>enabled.h</in>
+                </df>
+                <df name="rx">
+                  <df name="ba">
+                    <in>win.h</in>
+                  </df>
+                </df>
+                <df name="static">
+                  <df name="rx">
+                    <df name="buffer">
+                      <in>num.h</in>
+                    </df>
+                  </df>
+                </df>
+                <df name="tx">
+                  <df name="ba">
+                    <in>win.h</in>
+                  </df>
+                  <df name="buffer">
+                    <in>type.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="xtal">
+                <df name="freq">
+                  <in>40.h</in>
+                </df>
+                <in>freq.h</in>
+              </df>
+            </df>
+            <df name="esptoolpy">
+              <df name="after">
+                <in>reset.h</in>
+              </df>
+              <df name="baud">
+                <df name="other">
+                  <in>val.h</in>
+                </df>
+                <in>115200b.h</in>
+              </df>
+              <df name="before">
+                <in>reset.h</in>
+              </df>
+              <df name="flashfreq">
+                <in>40m.h</in>
+              </df>
+              <df name="flashsize">
+                <in>2mb.h</in>
+                <in>detect.h</in>
+              </df>
+              <in>after.h</in>
+              <in>baud.h</in>
+              <in>before.h</in>
+              <in>compressed.h</in>
+              <in>flashfreq.h</in>
+              <in>flashmode.h</in>
+              <in>flashsize.h</in>
+              <in>port.h</in>
+            </df>
+            <df name="fatfs">
+              <df name="codepage">
+                <in>437.h</in>
+              </df>
+              <df name="fs">
+                <in>lock.h</in>
+              </df>
+              <df name="lfn">
+                <in>none.h</in>
+              </df>
+              <df name="per">
+                <df name="file">
+                  <in>cache.h</in>
+                </df>
+              </df>
+              <df name="timeout">
+                <in>ms.h</in>
+              </df>
+              <in>codepage.h</in>
+            </df>
+            <df name="flashmode">
+              <in>dio.h</in>
+            </df>
+            <df name="four">
+              <df name="universal">
+                <df name="mac">
+                  <in>address.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="freertos">
+              <df name="assert">
+                <df name="fail">
+                  <in>abort.h</in>
+                </df>
+                <df name="on">
+                  <df name="untested">
+                    <in>function.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="check">
+                <df name="stackoverflow">
+                  <in>canary.h</in>
+                </df>
+              </df>
+              <df name="coretimer">
+                <in>0.h</in>
+              </df>
+              <df name="idle">
+                <df name="task">
+                  <in>stacksize.h</in>
+                </df>
+              </df>
+              <df name="interrupt">
+                <in>backtrace.h</in>
+              </df>
+              <df name="isr">
+                <in>stacksize.h</in>
+              </df>
+              <df name="max">
+                <df name="task">
+                  <df name="name">
+                    <in>len.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="queue">
+                <df name="registry">
+                  <in>size.h</in>
+                </df>
+              </df>
+              <df name="thread">
+                <df name="local">
+                  <df name="storage">
+                    <in>pointers.h</in>
+                  </df>
+                </df>
+              </df>
+              <in>hz.h</in>
+            </df>
+            <df name="heap">
+              <df name="poisoning">
+                <in>disabled.h</in>
+              </df>
+            </df>
+            <df name="int">
+              <df name="wdt">
+                <df name="check">
+                  <in>cpu1.h</in>
+                </df>
+                <df name="timeout">
+                  <in>ms.h</in>
+                </df>
+              </df>
+              <in>wdt.h</in>
+            </df>
+            <df name="ip">
+              <df name="lost">
+                <df name="timer">
+                  <in>interval.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="ipc">
+              <df name="task">
+                <df name="stack">
+                  <in>size.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="libsodium">
+              <df name="use">
+                <df name="mbedtls">
+                  <in>sha.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="log">
+              <df name="bootloader">
+                <df name="level">
+                  <in>info.h</in>
+                </df>
+                <in>level.h</in>
+              </df>
+              <df name="default">
+                <df name="level">
+                  <in>info.h</in>
+                </df>
+                <in>level.h</in>
+              </df>
+              <in>colors.h</in>
+            </df>
+            <df name="lwip">
+              <df name="dhcp">
+                <df name="does">
+                  <df name="arp">
+                    <in>check.h</in>
+                  </df>
+                </df>
+                <df name="max">
+                  <df name="ntp">
+                    <in>servers.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="dhcps">
+                <df name="lease">
+                  <in>unit.h</in>
+                </df>
+                <df name="max">
+                  <df name="station">
+                    <in>num.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="etharp">
+                <df name="trust">
+                  <df name="ip">
+                    <in>mac.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="loopback">
+                <df name="max">
+                  <in>pbufs.h</in>
+                </df>
+              </df>
+              <df name="max">
+                <df name="active">
+                  <in>tcp.h</in>
+                </df>
+                <df name="listening">
+                  <in>tcp.h</in>
+                </df>
+                <df name="raw">
+                  <in>pcbs.h</in>
+                </df>
+                <df name="udp">
+                  <in>pcbs.h</in>
+                </df>
+                <in>sockets.h</in>
+              </df>
+              <df name="netif">
+                <in>loopback.h</in>
+              </df>
+              <df name="so">
+                <df name="reuse">
+                  <in>rxtoall.h</in>
+                </df>
+                <in>reuse.h</in>
+              </df>
+            </df>
+            <df name="main">
+              <df name="task">
+                <df name="stack">
+                  <in>size.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="make">
+              <df name="warn">
+                <df name="undefined">
+                  <in>variables.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="mbedtls">
+              <df name="aes">
+                <in>c.h</in>
+              </df>
+              <df name="ccm">
+                <in>c.h</in>
+              </df>
+              <df name="ecdh">
+                <in>c.h</in>
+              </df>
+              <df name="ecdsa">
+                <in>c.h</in>
+              </df>
+              <df name="ecp">
+                <df name="dp">
+                  <df name="bp256r1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="bp384r1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="bp512r1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="curve25519">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="secp192k1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="secp192r1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="secp224k1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="secp224r1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="secp256k1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="secp256r1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="secp384r1">
+                    <in>enabled.h</in>
+                  </df>
+                  <df name="secp521r1">
+                    <in>enabled.h</in>
+                  </df>
+                </df>
+                <df name="nist">
+                  <in>optim.h</in>
+                </df>
+                <in>c.h</in>
+              </df>
+              <df name="gcm">
+                <in>c.h</in>
+              </df>
+              <df name="hardware">
+                <in>aes.h</in>
+              </df>
+              <df name="have">
+                <in>time.h</in>
+              </df>
+              <df name="key">
+                <df name="exchange">
+                  <df name="dhe">
+                    <in>rsa.h</in>
+                  </df>
+                  <df name="ecdh">
+                    <in>ecdsa.h</in>
+                    <in>rsa.h</in>
+                  </df>
+                  <df name="ecdhe">
+                    <in>ecdsa.h</in>
+                    <in>rsa.h</in>
+                  </df>
+                  <df name="elliptic">
+                    <in>curve.h</in>
+                  </df>
+                  <in>rsa.h</in>
+                </df>
+              </df>
+              <df name="pem">
+                <df name="parse">
+                  <in>c.h</in>
+                </df>
+                <df name="write">
+                  <in>c.h</in>
+                </df>
+              </df>
+              <df name="rc4">
+                <in>disabled.h</in>
+              </df>
+              <df name="ssl">
+                <df name="max">
+                  <df name="content">
+                    <in>len.h</in>
+                  </df>
+                </df>
+                <df name="proto">
+                  <df name="tls1">
+                    <in>1.h</in>
+                    <in>2.h</in>
+                  </df>
+                  <in>tls1.h</in>
+                </df>
+                <df name="session">
+                  <in>tickets.h</in>
+                </df>
+                <in>alpn.h</in>
+                <in>renegotiation.h</in>
+              </df>
+              <df name="tls">
+                <df name="server">
+                  <df name="and">
+                    <in>client.h</in>
+                  </df>
+                </df>
+                <in>client.h</in>
+                <in>enabled.h</in>
+                <in>server.h</in>
+              </df>
+              <df name="x509">
+                <df name="crl">
+                  <df name="parse">
+                    <in>c.h</in>
+                  </df>
+                </df>
+                <df name="csr">
+                  <df name="parse">
+                    <in>c.h</in>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="memmap">
+              <in>smp.h</in>
+            </df>
+            <df name="monitor">
+              <df name="baud">
+                <df name="other">
+                  <in>val.h</in>
+                </df>
+                <in>115200b.h</in>
+              </df>
+              <in>baud.h</in>
+            </df>
+            <df name="newlib">
+              <df name="stdin">
+                <df name="line">
+                  <df name="ending">
+                    <in>cr.h</in>
+                  </df>
+                </df>
+              </df>
+              <df name="stdout">
+                <df name="line">
+                  <df name="ending">
+                    <in>crlf.h</in>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="number">
+              <df name="of">
+                <df name="universal">
+                  <df name="mac">
+                    <in>address.h</in>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="openssl">
+              <df name="assert">
+                <df name="do">
+                  <in>nothing.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="optimization">
+              <df name="assertions">
+                <in>enabled.h</in>
+              </df>
+              <df name="level">
+                <in>debug.h</in>
+              </df>
+            </df>
+            <df name="partition">
+              <df name="table">
+                <df name="custom">
+                  <df name="app">
+                    <df name="bin">
+                      <in>offset.h</in>
+                    </df>
+                  </df>
+                  <in>filename.h</in>
+                </df>
+                <df name="single">
+                  <in>app.h</in>
+                </df>
+                <in>filename.h</in>
+              </df>
+            </df>
+            <df name="spi">
+              <df name="flash">
+                <df name="rom">
+                  <df name="driver">
+                    <in>patch.h</in>
+                  </df>
+                </df>
+                <df name="writing">
+                  <df name="dangerous">
+                    <df name="regions">
+                      <in>aborts.h</in>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="spiffs">
+              <df name="cache">
+                <in>wr.h</in>
+              </df>
+              <df name="gc">
+                <df name="max">
+                  <in>runs.h</in>
+                </df>
+              </df>
+              <df name="max">
+                <in>partitions.h</in>
+              </df>
+              <df name="meta">
+                <in>length.h</in>
+              </df>
+              <df name="obj">
+                <df name="name">
+                  <in>len.h</in>
+                </df>
+              </df>
+              <df name="page">
+                <in>check.h</in>
+              </df>
+              <df name="use">
+                <df name="magic">
+                  <in>length.h</in>
+                </df>
+                <in>magic.h</in>
+                <in>mtime.h</in>
+              </df>
+              <in>cache.h</in>
+            </df>
+            <df name="stack">
+              <df name="check">
+                <in>none.h</in>
+              </df>
+            </df>
+            <df name="system">
+              <df name="event">
+                <df name="queue">
+                  <in>size.h</in>
+                </df>
+                <df name="task">
+                  <df name="stack">
+                    <in>size.h</in>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="task">
+              <df name="wdt">
+                <df name="check">
+                  <df name="idle">
+                    <df name="task">
+                      <in>cpu0.h</in>
+                      <in>cpu1.h</in>
+                    </df>
+                  </df>
+                </df>
+                <df name="timeout">
+                  <in>s.h</in>
+                </df>
+              </df>
+              <in>wdt.h</in>
+            </df>
+            <df name="tcp">
+              <df name="oversize">
+                <in>mss.h</in>
+              </df>
+              <df name="queue">
+                <in>ooseq.h</in>
+              </df>
+              <df name="recvmbox">
+                <in>size.h</in>
+              </df>
+              <df name="snd">
+                <df name="buf">
+                  <in>default.h</in>
+                </df>
+              </df>
+              <df name="wnd">
+                <in>default.h</in>
+              </df>
+              <in>maxrtx.h</in>
+              <in>msl.h</in>
+              <in>mss.h</in>
+              <in>synmaxrtx.h</in>
+            </df>
+            <df name="tcpip">
+              <df name="recvmbox">
+                <in>size.h</in>
+              </df>
+              <df name="task">
+                <df name="stack">
+                  <in>size.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="timer">
+              <df name="queue">
+                <in>length.h</in>
+              </df>
+              <df name="task">
+                <df name="stack">
+                  <in>depth.h</in>
+                  <in>size.h</in>
+                </df>
+                <in>priority.h</in>
+              </df>
+            </df>
+            <df name="tracemem">
+              <df name="reserve">
+                <in>dram.h</in>
+              </df>
+            </df>
+            <df name="udp">
+              <df name="recvmbox">
+                <in>size.h</in>
+              </df>
+            </df>
+            <df name="ulp">
+              <df name="coproc">
+                <df name="reserve">
+                  <in>mem.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="wl">
+              <df name="sector">
+                <df name="size">
+                  <in>4096.h</in>
+                </df>
+                <in>size.h</in>
+              </df>
+            </df>
+            <in>python.h</in>
+            <in>toolprefix.h</in>
+          </df>
+          <in>sdkconfig.h</in>
+        </df>
+        <df name="jsmn">
+          <df name="src">
+          </df>
+        </df>
+        <df name="json">
+          <df name="library">
+          </df>
+          <df name="port">
+          </df>
+        </df>
+        <df name="libsodium">
+          <df name="libsodium">
+            <df name="src">
+              <df name="libsodium">
+                <df name="crypto_aead">
+                  <df name="chacha20poly1305">
+                    <df name="sodium">
+                    </df>
+                  </df>
+                  <df name="xchacha20poly1305">
+                    <df name="sodium">
+                    </df>
+                  </df>
+                </df>
+                <df name="crypto_auth">
+                  <df name="hmacsha256">
+                  </df>
+                  <df name="hmacsha512">
+                  </df>
+                  <df name="hmacsha512256">
+                  </df>
+                </df>
+                <df name="crypto_box">
+                  <df name="curve25519xsalsa20poly1305">
+                  </df>
+                </df>
+                <df name="crypto_core">
+                  <df name="curve25519">
+                    <df name="ref10">
+                    </df>
+                  </df>
+                  <df name="hchacha20">
+                  </df>
+                  <df name="hsalsa20">
+                    <df name="ref2">
+                    </df>
+                  </df>
+                  <df name="salsa">
+                    <df name="ref">
+                    </df>
+                  </df>
+                </df>
+                <df name="crypto_generichash">
+                  <df name="blake2b">
+                    <df name="ref">
+                    </df>
+                  </df>
+                </df>
+                <df name="crypto_hash">
+                  <df name="sha256">
+                  </df>
+                  <df name="sha512">
+                  </df>
+                </df>
+                <df name="crypto_kdf">
+                  <df name="blake2b">
+                  </df>
+                </df>
+                <df name="crypto_kx">
+                </df>
+                <df name="crypto_onetimeauth">
+                  <df name="poly1305">
+                    <df name="donna">
+                    </df>
+                  </df>
+                </df>
+                <df name="crypto_pwhash">
+                  <df name="argon2">
+                  </df>
+                  <df name="scryptsalsa208sha256">
+                    <df name="nosse">
+                    </df>
+                  </df>
+                </df>
+                <df name="crypto_scalarmult">
+                  <df name="curve25519">
+                    <df name="ref10">
+                    </df>
+                  </df>
+                </df>
+                <df name="crypto_secretbox">
+                  <df name="xsalsa20poly1305">
+                  </df>
+                </df>
+                <df name="crypto_shorthash">
+                  <df name="siphash24">
+                    <df name="ref">
+                    </df>
+                  </df>
+                </df>
+                <df name="crypto_sign">
+                  <df name="ed25519">
+                    <df name="ref10">
+                    </df>
+                  </df>
+                </df>
+                <df name="crypto_stream">
+                  <df name="chacha20">
+                    <df name="ref">
+                    </df>
+                  </df>
+                  <df name="salsa20">
+                    <df name="ref">
+                    </df>
+                  </df>
+                  <df name="xsalsa20">
+                  </df>
+                </df>
+                <df name="crypto_verify">
+                  <df name="sodium">
+                  </df>
+                </df>
+                <df name="randombytes">
+                </df>
+                <df name="sodium">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="port">
+            <df name="crypto_hash_mbedtls">
+            </df>
+          </df>
+        </df>
+        <df name="log">
+        </df>
+        <df name="lwip">
+          <df name="api">
+          </df>
+          <df name="apps">
+            <df name="ping">
+            </df>
+            <df name="sntp">
+            </df>
+          </df>
+          <df name="core">
+            <df name="ipv4">
+            </df>
+            <df name="ipv6">
+            </df>
+          </df>
+          <df name="netif">
+          </df>
+          <df name="port">
+            <df name="debug">
+            </df>
+            <df name="freertos">
+            </df>
+            <df name="netif">
+            </df>
+          </df>
+        </df>
+        <df name="main">
+        </df>
+        <df name="mbedtls">
+          <df name="library">
+          </df>
+          <df name="port">
+          </df>
+        </df>
+        <df name="mdns">
+        </df>
+        <df name="micro-ecc">
+          <df name="micro-ecc">
+          </df>
+        </df>
+        <df name="newlib">
+        </df>
+        <df name="nghttp">
+          <df name="nghttp2">
+            <df name="lib">
+            </df>
+          </df>
+          <df name="port">
+          </df>
+        </df>
+        <df name="nvs_flash">
+          <df name="src">
+          </df>
+        </df>
+        <df name="openssl">
+          <df name="library">
+          </df>
+          <df name="platform">
+          </df>
+        </df>
+        <df name="partition_table">
+        </df>
+        <df name="pthread">
+        </df>
+        <df name="sdmmc">
+        </df>
+        <df name="soc">
+          <df name="esp32">
+          </df>
+        </df>
+        <df name="spi_flash">
+        </df>
+        <df name="spiffs">
+          <df name="spiffs">
+            <df name="src">
+            </df>
+          </df>
+        </df>
+        <df name="tcpip_adapter">
+        </df>
+        <df name="ulp">
+        </df>
+        <df name="vfs">
+        </df>
+        <df name="wear_levelling">
+        </df>
+        <df name="wpa_supplicant">
+          <df name="port">
+          </df>
+          <df name="src">
+            <df name="crypto">
+            </df>
+            <df name="fast_crypto">
+            </df>
+          </df>
+        </df>
+        <df name="xtensa-debug-module">
+        </df>
+      </df>
+      <df name="main">
+        <in>infrared_nec_main.c</in>
+      </df>
+      <df name="NewFolder">
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

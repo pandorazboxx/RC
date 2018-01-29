@@ -21,7 +21,7 @@
 static const char* NEC_TAG = "NEC";
 
 //CHOOSE SELF TEST OR NORMAL TEST
-//#define RMT_RX_SELF_TEST   0
+#define RMT_RX_SELF_TEST   0
 
 /******************************************************/
 /*****                SELF TEST:                  *****/
@@ -30,16 +30,16 @@ static const char* NEC_TAG = "NEC";
 /*RX task will print NEC data it receives.            */
 /******************************************************/
 
-//#if RMT_RX_SELF_TEST
-//#define RMT_RX_ACTIVE_LEVEL  1   /*!< Data bit is active high for self test mode */
-//#define RMT_TX_CARRIER_EN    0   /*!< Disable carrier for self test mode  */
-//#else
+#if RMT_RX_SELF_TEST
+#define RMT_RX_ACTIVE_LEVEL  1   /*!< Data bit is active high for self test mode */
+#define RMT_TX_CARRIER_EN    0   /*!< Disable carrier for self test mode  */
+#else
 
 //Test with infrared LED, we have to enable carrier for transmitter
 //When testing via IR led, the receiver waveform is usually active-low.
 #define RMT_RX_ACTIVE_LEVEL  0   /*!< If we connect with a IR receiver, the data is active low */
 #define RMT_TX_CARRIER_EN    1   /*!< Enable carrier for IR transmitter test with IR led */
-//#endif
+#endif
 
 #define RMT_TX_CHANNEL    1     /*!< RMT channel for transmitter */
 #define RMT_TX_GPIO_NUM  18     /*!< GPIO number for transmitter signal */
@@ -50,12 +50,13 @@ static const char* NEC_TAG = "NEC";
 
 #define NEC_HEADER_HIGH_US    9000                         /*!< NEC protocol header: positive 9ms */
 #define NEC_HEADER_LOW_US     4500                         /*!< NEC protocol header: negative 4.5ms*/
+#define NEC_HEADER_MARGIN      320                         /*!< NEC header parse margin time (~3.5%)*/
 #define NEC_BIT_ONE_HIGH_US    560                         /*!< NEC protocol data bit 1: positive 0.56ms */
 #define NEC_BIT_ONE_LOW_US    (2250-NEC_BIT_ONE_HIGH_US)   /*!< NEC protocol data bit 1: negative 1.69ms */
 #define NEC_BIT_ZERO_HIGH_US   560                         /*!< NEC protocol data bit 0: positive 0.56ms */
 #define NEC_BIT_ZERO_LOW_US   (1120-NEC_BIT_ZERO_HIGH_US)  /*!< NEC protocol data bit 0: negative 0.56ms */
 #define NEC_BIT_END            560                         /*!< NEC protocol end: positive 0.56ms */
-#define NEC_BIT_MARGIN         20                          /*!< NEC parse margin time */
+#define NEC_BIT_MARGIN         110                         /*!< NEC bit parse margin time (~20%)*/
 
 #define NEC_ITEM_DURATION(d)  ((d & 0x7fff)*10/RMT_TICK_10_US)  /*!< Parse duration time from memory register value */
 #define NEC_DATA_ITEM_NUM   34  /*!< NEC code item number: header + 32bit data + end */
@@ -124,10 +125,11 @@ inline bool nec_check_in_range(int duration_ticks, int target_us, int margin_us)
 static bool nec_header_if(rmt_item32_t* item)
 {
     if((item->level0 == RMT_RX_ACTIVE_LEVEL && item->level1 != RMT_RX_ACTIVE_LEVEL)
-        && nec_check_in_range(item->duration0, NEC_HEADER_HIGH_US, NEC_BIT_MARGIN)
-        && nec_check_in_range(item->duration1, NEC_HEADER_LOW_US, NEC_BIT_MARGIN)) {
+        && nec_check_in_range(item->duration0, NEC_HEADER_HIGH_US, NEC_HEADER_MARGIN)
+        && nec_check_in_range(item->duration1, NEC_HEADER_LOW_US, NEC_HEADER_MARGIN)) {
         return true;
     }
+    printf("did not see expected NEC header.\n");
     return false;
 }
 
@@ -169,6 +171,7 @@ static int nec_parse_items(rmt_item32_t* item, int item_num, uint16_t* addr, uin
     }
     int i = 0, j = 0;
     if(!nec_header_if(item++)) {
+        printf("Did not parse header\n");
         return -1;
     }
     uint16_t addr_t = 0;
@@ -367,5 +370,5 @@ static void rmt_example_nec_tx_task()
 void app_main()
 {
     xTaskCreate(rmt_example_nec_rx_task, "rmt_nec_rx_task", 2048, NULL, 10, NULL);
-    xTaskCreate(rmt_example_nec_tx_task, "rmt_nec_tx_task", 2048, NULL, 10, NULL);
+    //xTaskCreate(rmt_example_nec_tx_task, "rmt_nec_tx_task", 2048, NULL, 10, NULL);
 }
