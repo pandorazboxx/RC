@@ -132,3 +132,4 @@ commands.o: /home/mmigliaccio/esp/esp-idf/components/console/./commands.c \
 
 /home/mmigliaccio/esp/esp-idf/components/esp32/include/rom/queue.h:
 /home/mmigliaccio/esp/esp-idf/components/console/./commands.c:
+/home/mmigliaccio/esp/esp-idf/components/console/./commands.c:

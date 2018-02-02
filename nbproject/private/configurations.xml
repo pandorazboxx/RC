@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
-    <df root="../../esp/esp-idf/components" name="2">
+    <df root="../../esp/esp-idf/components" name="0">
       <df name="app_trace">
         <df name="gcov">
           <in>gcov_rtio.c</in>
@@ -969,10 +969,60 @@
       <df name="driver">
         <df name="include">
           <df name="driver">
+            <in>adc.h</in>
+            <in>adc2_wifi_internal.h</in>
+            <in>dac.h</in>
+            <in>gpio.h</in>
+            <in>i2c.h</in>
+            <in>i2s.h</in>
+            <in>ledc.h</in>
+            <in>mcpwm.h</in>
+            <in>pcnt.h</in>
+            <in>periph_ctrl.h</in>
+            <in>rmt.h</in>
+            <in>rtc_cntl.h</in>
+            <in>rtc_io.h</in>
+            <in>sdmmc_defs.h</in>
+            <in>sdmmc_host.h</in>
+            <in>sdmmc_types.h</in>
+            <in>sdspi_host.h</in>
+            <in>sigmadelta.h</in>
+            <in>spi_common.h</in>
+            <in>spi_master.h</in>
+            <in>spi_slave.h</in>
+            <in>timer.h</in>
+            <in>touch_pad.h</in>
+            <in>uart.h</in>
           </df>
         </df>
         <df name="test">
+          <in>test_adc2.c</in>
+          <in>test_spi_master.c</in>
+          <in>test_spi_slave.c</in>
         </df>
+        <in>gpio.c</in>
+        <in>i2c.c</in>
+        <in>i2s.c</in>
+        <in>ledc.c</in>
+        <in>mcpwm.c</in>
+        <in>pcnt.c</in>
+        <in>periph_ctrl.c</in>
+        <in>rmt.c</in>
+        <in>rtc_module.c</in>
+        <in>sdmmc_host.c</in>
+        <in>sdmmc_private.h</in>
+        <in>sdmmc_transaction.c</in>
+        <in>sdspi_crc.c</in>
+        <in>sdspi_crc.h</in>
+        <in>sdspi_host.c</in>
+        <in>sdspi_private.h</in>
+        <in>sdspi_transaction.c</in>
+        <in>sigmadelta.c</in>
+        <in>spi_common.c</in>
+        <in>spi_master.c</in>
+        <in>spi_slave.c</in>
+        <in>timer.c</in>
+        <in>uart.c</in>
       </df>
       <df name="esp32">
         <df name="hwcrypto">
@@ -3894,7 +3944,7 @@
         <in>trax.c</in>
       </df>
     </df>
-    <df root="." name="0">
+    <df root="." name="1">
       <df name="build">
         <df name="app_trace">
           <df name="gcov">
@@ -5019,9 +5069,12 @@
         </df>
       </df>
       <df name="main">
+        <df name="rmtlibs">
+          <in>lg_akb74815301.h</in>
+          <in>vizio_xrt500.h</in>
+          <in>vz_p265v3rc.h</in>
+        </df>
         <in>infrared_nec_main.c</in>
-      </df>
-      <df name="NewFolder">
       </df>
     </df>
   </logicalFolder>
