@@ -50,6 +50,10 @@ static const char* NEC_TAG = "NEC";
 
 #define NEC_HEADER_HIGH_US    9000                         /*!< NEC protocol header: positive 9ms */
 #define NEC_HEADER_LOW_US     4500                         /*!< NEC protocol header: negative 4.5ms*/
+#define LG_HEADER_HIGH_US     4500                         /*!< LG soundbar header: positive 4.5ms */
+#define LG_HEADER_LOW_US      4500                         /*!< LG soundbar header: negative 4.5ms */
+#define FIOS_HEADER_HIGH_US   9000
+#define FIOS_HEARDER_LOW_US   4500
 #define NEC_HEADER_MARGIN      320                         /*!< NEC header parse margin time (~3.5%)*/
 #define NEC_BIT_ONE_HIGH_US    560                         /*!< NEC protocol data bit 1: positive 0.56ms */
 #define NEC_BIT_ONE_LOW_US    (2250-NEC_BIT_ONE_HIGH_US)   /*!< NEC protocol data bit 1: negative 1.69ms */
@@ -58,8 +62,16 @@ static const char* NEC_TAG = "NEC";
 #define NEC_BIT_END            560                         /*!< NEC protocol end: positive 0.56ms */
 #define NEC_BIT_MARGIN         110                         /*!< NEC bit parse margin time (~20%)*/
 
+#define FIOS_BIT_ONE_HIGH_US    560                         /*!< FIOS protocol data bit 1: positive 0.56ms */
+#define FIOS_BIT_ONE_LOW_US    (5000-FIOS_BIT_ONE_HIGH_US)  /*!< FIOS protocol data bit 1: negative 1.69ms */
+#define FIOS_BIT_ZERO_HIGH_US   560                         /*!< FIOS protocol data bit 0: positive 0.56ms */
+#define FIOS_BIT_ZERO_LOW_US   (2700-FIOS_BIT_ZERO_HIGH_US) /*!< FIOS protocol data bit 0: negative 0.56ms */
+#define FIOS_BIT_END            560                         /*!< FIOS protocol end: positive 0.56ms */
+#define FIOS_BIT_MARGIN         110                         /*!< FIOS bit parse margin time (~20%)*/
+
 #define NEC_ITEM_DURATION(d)  ((d & 0x7fff)*10/RMT_TICK_10_US)  /*!< Parse duration time from memory register value */
 #define NEC_DATA_ITEM_NUM   34  /*!< NEC code item number: header + 32bit data + end */
+#define FIOS_DATA_ITEM_NUM  18  /*!<FIOS code item number: header + 16bit data + end */
 #define RMT_TX_DATA_NUM  100    /*!< NEC tx test data number */
 #define rmt_item32_tIMEOUT_US  9500   /*!< RMT receiver timeout value(us) */
 
@@ -111,6 +123,7 @@ static void nec_fill_item_end(rmt_item32_t* item)
  */
 inline bool nec_check_in_range(int duration_ticks, int target_us, int margin_us)
 {
+    //printf("Duration is %d, expecting %d microseconds",(NEC_ITEM_DURATION(duration_ticks)),target_us);
     if(( NEC_ITEM_DURATION(duration_ticks) < (target_us + margin_us))
         && ( NEC_ITEM_DURATION(duration_ticks) > (target_us - margin_us))) {
         return true;
@@ -124,11 +137,18 @@ inline bool nec_check_in_range(int duration_ticks, int target_us, int margin_us)
  */
 static bool nec_header_if(rmt_item32_t* item)
 {
+    printf("duration0 is 0x%x\n",item->duration0);
+    printf("duration1 is 0x%x\n",item->duration1);
+    
     if((item->level0 == RMT_RX_ACTIVE_LEVEL && item->level1 != RMT_RX_ACTIVE_LEVEL)
         && nec_check_in_range(item->duration0, NEC_HEADER_HIGH_US, NEC_HEADER_MARGIN)
         && nec_check_in_range(item->duration1, NEC_HEADER_LOW_US, NEC_HEADER_MARGIN)) {
         return true;
-    }
+    } else if((item->level0 == RMT_RX_ACTIVE_LEVEL && item->level1 != RMT_RX_ACTIVE_LEVEL)
+        && nec_check_in_range(item->duration0, LG_HEADER_HIGH_US, NEC_HEADER_MARGIN)
+        && nec_check_in_range(item->duration1, LG_HEADER_LOW_US, NEC_HEADER_MARGIN)) {
+        return true;
+    } 
     printf("did not see expected NEC header.\n");
     return false;
 }
@@ -142,6 +162,10 @@ static bool nec_bit_one_if(rmt_item32_t* item)
         && nec_check_in_range(item->duration0, NEC_BIT_ONE_HIGH_US, NEC_BIT_MARGIN)
         && nec_check_in_range(item->duration1, NEC_BIT_ONE_LOW_US, NEC_BIT_MARGIN)) {
         return true;
+    } else if((item->level0 == RMT_RX_ACTIVE_LEVEL && item->level1 != RMT_RX_ACTIVE_LEVEL)
+        && nec_check_in_range(item->duration0, FIOS_BIT_ONE_HIGH_US, FIOS_BIT_MARGIN)
+        && nec_check_in_range(item->duration1, FIOS_BIT_ONE_LOW_US, FIOS_BIT_MARGIN)) {
+        return true;
     }
     return false;
 }
@@ -154,6 +178,10 @@ static bool nec_bit_zero_if(rmt_item32_t* item)
     if((item->level0 == RMT_RX_ACTIVE_LEVEL && item->level1 != RMT_RX_ACTIVE_LEVEL)
         && nec_check_in_range(item->duration0, NEC_BIT_ZERO_HIGH_US, NEC_BIT_MARGIN)
         && nec_check_in_range(item->duration1, NEC_BIT_ZERO_LOW_US, NEC_BIT_MARGIN)) {
+        return true;
+    } else if((item->level0 == RMT_RX_ACTIVE_LEVEL && item->level1 != RMT_RX_ACTIVE_LEVEL)
+        && nec_check_in_range(item->duration0, FIOS_BIT_ZERO_HIGH_US, FIOS_BIT_MARGIN)
+        && nec_check_in_range(item->duration1, FIOS_BIT_ZERO_LOW_US, FIOS_BIT_MARGIN)) {
         return true;
     }
     return false;
@@ -202,6 +230,46 @@ static int nec_parse_items(rmt_item32_t* item, int item_num, uint16_t* addr, uin
     *data = data_t;
     return i;
 }
+
+/*
+ * @brief Parse FIOS 16 bit waveform to address and command.
+ */
+static int fios_parse_items(rmt_item32_t* item, int item_num, uint16_t* addr, uint16_t* data)
+{
+    printf("attempting to parse items\n");
+    int w_len = item_num;
+    if(w_len < FIOS_DATA_ITEM_NUM) {
+        printf("w_len < FIOS_DATA_ITEM_NUM\n");
+        return -1;
+    }
+    int i = 0, j = 0;
+    if(!nec_header_if(item++)) {
+        printf("Did not parse header\n");
+        return -1;
+    }
+    uint16_t addr_t = 0;
+    for(j = 0; j < 16; j++) {
+        if(nec_bit_one_if(item)) {
+            addr_t |= (1 << j);
+        } else if(nec_bit_zero_if(item)) {
+            addr_t |= (0 << j);
+        } else {
+            printf("did not recognize a bit\n");
+            return -1;
+        }
+        item++;
+        i++;
+    }
+    uint16_t data_t = 0;
+    for(j = 0; j < 16; j++) {
+        data_t |= (0 << j); // we only care about 16 bits, so just set the command data to zero.
+        i++;
+    }
+    *addr = addr_t;
+    *data = data_t;
+    return i;
+}
+
 
 /*
  * @brief Build NEC 32bit waveform.
@@ -298,17 +366,18 @@ static void rmt_example_nec_rx_task()
         //We just need to parse the value and return the spaces of ringbuffer.
         rmt_item32_t* item = (rmt_item32_t*) xRingbufferReceive(rb, &rx_size, 1000);
         if(item) {
+            printf("received an item\n");
             uint16_t rmt_addr;
             uint16_t rmt_cmd;
             int offset = 0;
             while(1) {
                 //parse data value from ringbuffer.
-                int res = nec_parse_items(item + offset, rx_size / 4 - offset, &rmt_addr, &rmt_cmd);
-		rmt_addr = (0x00FF) & (rmt_addr);
-		rmt_cmd = (0x00FF) & (rmt_cmd);
+                int res = fios_parse_items(item + offset, rx_size / 4 - offset, &rmt_addr, &rmt_cmd);
+		//rmt_addr = (0x00FF) & (rmt_addr);
+		//rmt_cmd = (0x00FF) & (rmt_cmd);
                 if(res > 0) {
                     offset += res + 1;
-                    ESP_LOGI(NEC_TAG, "RMT RCV --- addr: 0x%02x cmd: 0x%02x", rmt_addr, rmt_cmd);
+                    ESP_LOGI(NEC_TAG, "RMT RCV --- cmd: 0x%02x", rmt_addr);
                 } else {
                     break;
                 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
-    <df root="../../esp/esp-idf/components" name="2">
+    <df root="../../esp/esp-idf/components" name="0">
       <df name="app_trace">
         <df name="gcov">
           <in>gcov_rtio.c</in>
@@ -3634,7 +3634,14 @@
       <itemPath>../../esp/esp-idf/tools/kconfig/zconf.lex.c</itemPath>
       <itemPath>../../esp/esp-idf/tools/kconfig/zconf.tab.c</itemPath>
     </logicalFolder>
-    <df root="." name="0">
+    <df root="." name="1">
+      <df name="main">
+        <df name="rmtlibs">
+          <in>lg_akb74815301.h</in>
+          <in>vizio_xrt500.h</in>
+          <in>vz_p265v3rc.h</in>
+        </df>
+      </df>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -16560,6 +16567,12 @@
           </incDir>
         </cTool>
       </folder>
+      <item path="main/rmtlibs/lg_akb74815301.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main/rmtlibs/vizio_xrt500.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main/rmtlibs/vz_p265v3rc.h" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>
