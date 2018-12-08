@@ -7,13 +7,24 @@
    CONDITIONS OF ANY KIND, either express or implied.
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/event_groups.h"
 #include "freertos/queue.h"
 #include "freertos/semphr.h"
+#include "esp_system.h"
 #include "esp_err.h"
 #include "esp_log.h"
+#include "nvs_flash.h"
+#include "bt.h"
+#include "bta_api.h"
+#include "esp_gap_ble_api.h"
+#include "esp_gatts_api.h"
+#include "esp_bt_defs.h"
+#include "esp_bt_main.h"
+#include "sdkconfig.h"
 #include "driver/rmt.h"
 #include "driver/periph_ctrl.h"
 #include "soc/rmt_reg.h"
@@ -372,12 +383,12 @@ static void rmt_example_nec_rx_task()
             int offset = 0;
             while(1) {
                 //parse data value from ringbuffer.
-                int res = fios_parse_items(item + offset, rx_size / 4 - offset, &rmt_addr, &rmt_cmd);
+                int res = nec_parse_items(item + offset, rx_size / 4 - offset, &rmt_addr, &rmt_cmd);
 		//rmt_addr = (0x00FF) & (rmt_addr);
 		//rmt_cmd = (0x00FF) & (rmt_cmd);
                 if(res > 0) {
                     offset += res + 1;
-                    ESP_LOGI(NEC_TAG, "RMT RCV --- cmd: 0x%02x", rmt_addr);
+                    ESP_LOGI(NEC_TAG, "RMT RCV --- addr: 0x%04x  cmd: 0x%04x", rmt_addr, rmt_cmd);
                 } else {
                     break;
                 }

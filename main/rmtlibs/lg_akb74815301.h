@@ -27,6 +27,9 @@ extern "C" {
 #endif
 
 #define LG_AKB74815301_ADDR = 0x2c;
+#define LG_HEADER_HIGH_US     4500      /*!< LG soundbar header: positive 4.5ms */
+#define LG_HEADER_LOW_US      4500      /*!< LG soundbar header: negative 4.5ms */
+
 
 typedef enum {
     CMD_POWER       = 0x1e,
