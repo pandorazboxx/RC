@@ -97,4 +97,3 @@ argtable3/argtable3.o: \
 
 /home/mmigliaccio/esp/esp-idf/components/newlib/include/machine/setjmp.h:
 /home/mmigliaccio/esp/esp-idf/components/console/argtable3/argtable3.c:
-/home/mmigliaccio/esp/esp-idf/components/console/argtable3/argtable3.c:

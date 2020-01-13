@@ -358,4 +358,3 @@ libcoap/src/str.o: \
 
 /home/mmigliaccio/esp/esp-idf/components/coap/libcoap/include/coap/str.h:
 /home/mmigliaccio/esp/esp-idf/components/coap/libcoap/src/str.c:
-/home/mmigliaccio/esp/esp-idf/components/coap/libcoap/src/str.c:

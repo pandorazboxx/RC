@@ -232,4 +232,3 @@ cxx_guards.o: \
 
 /home/mmigliaccio/esp/esp-idf/components/freertos/include/freertos/list.h:
 /home/mmigliaccio/esp/esp-idf/components/cxx/./cxx_guards.cpp:
-/home/mmigliaccio/esp/esp-idf/components/cxx/./cxx_guards.cpp:

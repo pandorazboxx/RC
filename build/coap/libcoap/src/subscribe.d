@@ -454,4 +454,3 @@ libcoap/src/subscribe.o: \
 
 /home/mmigliaccio/esp/esp-idf/components/coap/libcoap/include/coap/utlist.h:
 /home/mmigliaccio/esp/esp-idf/components/coap/libcoap/src/subscribe.c:
-/home/mmigliaccio/esp/esp-idf/components/coap/libcoap/src/subscribe.c:
